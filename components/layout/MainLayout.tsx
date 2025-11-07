@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react'
 import Header from './Header'
-// import HtmlHead from './HtmlHead'
 import Footer from './Footer';
 import NewsletterCard from './NewsletterCard';
 

@@ -1,4 +1,3 @@
-import { escapeHTML } from "@/lib/escapeHtml";
 import Head from "next/head";
 import React from "react";
 
@@ -21,9 +20,7 @@ const HtmlHead = ({
       <title>{metatitle}</title>
       <meta
         name="description"
-        content={escapeHTML(metadescription, {
-          ALLOWED_TAGS: [],
-        })}
+        content={metadescription}
       />
       <link rel="icon" type="image/png" href="/favicon.ico" />
 
@@ -43,9 +40,7 @@ const HtmlHead = ({
       <meta property="og:title" content={metatitle} />
       <meta
         property="og:description"
-        content={escapeHTML(metadescription, {
-          ALLOWED_TAGS: [],
-        })}
+        content={metadescription}
       />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:site_name" content="PT. Kalimantan Prima Persada" />
