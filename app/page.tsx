@@ -9,6 +9,8 @@ import { EventCategoryType } from "./beranda/homePageServices";
 
 import MainLayout from "@/components/layout/MainLayout";
 import Image from "next/image";
+import IconSlider from "@/components/ui/icon-slider";
+import SeremonyAssistCard from "@/components/SeremonyAssistCard";
 
 export const metadata: Metadata = {
   title: "Seremony",
@@ -54,7 +56,7 @@ const EventCategories: EventCategoryType[] = [
   },
 ];
 
-const Vendors = [
+const vendorListIconData = [
   { 
     _id: "1",
     name: "Vendor 1",
@@ -166,23 +168,19 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-[#FAFAFA] py-20">
-        <h2 className="text-[40px] tracking-tight text-center font-semibold">Partner vendor terbaik kami</h2>
-        <div className="flex items-center justify-around mt-14">
-          {Vendors.map(item => {
-            return (
-              <Image 
-                key={`vendor-${item._id}`}
-                src={`/vendors-logo/${item.logo}`}
-                alt=""
-                height={48}
-                width={96}
-                className="h-12 w-auto"
-              />
-            )
-          })}
+      <div className="bg-soft-gray">
+        <div className="py-20 custom-container overflow-x-hidden">
+          <h2 className="text-[40px] tracking-tight text-center font-semibold">Partner vendor terbaik kami</h2>
+          <div className="flex items-center justify-around mt-14 mb-12">
+            <IconSlider 
+              icons={vendorListIconData}
+              interval={3000}
+            />
+          </div>
         </div>
       </div>
+
+      <SeremonyAssistCard />
     </MainLayout>
   );
 }

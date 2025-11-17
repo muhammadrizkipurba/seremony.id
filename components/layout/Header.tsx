@@ -5,18 +5,22 @@ import Image from 'next/image'
 import { usePathname } from 'next/navigation';
 import { HiArrowLongRight } from "react-icons/hi2";
 import { NavigationMenus } from '@/constant';
+import SidebarMenu from './SidebarMenu';
 
 const Header = () => {
   const pathname = usePathname();
 
   return (
     <header className='custom-container py-6 flex items-center justify-between shadow-xs'>
-      <Image 
-        src="/logo/logo-text-black-color.svg"
-        alt="seremony"
-        height={40}
-        width={220}
-      />
+      <Link href="/">
+        <Image 
+          src="/logo/logo-text-black-color.svg"
+          alt="seremony"
+          height={40}
+          width={220}
+          className='h-8 md:h-10 w-auto'
+        />
+      </Link>
 
       <nav className='hidden lg:block'>
         <ul className='flex items-center gap-10'>
@@ -50,6 +54,10 @@ const Header = () => {
           </li>
         </ul>
       </nav>
+
+      <div className='block lg:hidden'>
+        <SidebarMenu />
+      </div>
     </header>
   )
 }
