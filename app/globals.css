@@ -62,6 +62,18 @@ label:hover {
   cursor: default;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .custom-container {
   @apply max-w-[1550px] px-5 mx-auto;
 }

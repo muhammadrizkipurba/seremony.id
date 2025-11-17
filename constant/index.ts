@@ -18,4 +18,51 @@ export const SocialMediaAccounts = [
   { name: "tiktok", link: "https://instagram.com/@seremony.hub"},
   { name: "facebook", link: "https://instagram.com/seremony.hub"},
   { name: "youtube", link: "https://instagram.com/seremonyhub"},
+];
+
+export const FAQs = [
+  { 
+    question: "Lorem ipsum dolor sit amet consectetur. ",
+    answer: "Lorem ipsum dolor sit amet consectetur. Phasellus id mollis nunc turpis lacus. Habitant a justo mattis at aliquam facilisi purus mi viverra. Massa consectetur cursus in interdum.",
+  },
+  { 
+    question: "Lorem ipsum dolor sit amet consectetur. ",
+    answer: "Lorem ipsum dolor sit amet consectetur. Phasellus id mollis nunc turpis lacus. Habitant a justo mattis at aliquam facilisi purus mi viverra. Massa consectetur cursus in interdum.",
+  },
+  { 
+    question: "Lorem ipsum dolor sit amet consectetur. ",
+    answer: "Lorem ipsum dolor sit amet consectetur. Phasellus id mollis nunc turpis lacus. Habitant a justo mattis at aliquam facilisi purus mi viverra. Massa consectetur cursus in interdum.",
+  },
+  { 
+    question: "Lorem ipsum dolor sit amet consectetur. ",
+    answer: "Lorem ipsum dolor sit amet consectetur. Phasellus id mollis nunc turpis lacus. Habitant a justo mattis at aliquam facilisi purus mi viverra. Massa consectetur cursus in interdum.",
+  },
+  { 
+    question: "Lorem ipsum dolor sit amet consectetur. ",
+    answer: "Lorem ipsum dolor sit amet consectetur. Phasellus id mollis nunc turpis lacus. Habitant a justo mattis at aliquam facilisi purus mi viverra. Massa consectetur cursus in interdum.",
+  },
+  { 
+    question: "Lorem ipsum dolor sit amet consectetur. ",
+    answer: "Lorem ipsum dolor sit amet consectetur. Phasellus id mollis nunc turpis lacus. Habitant a justo mattis at aliquam facilisi purus mi viverra. Massa consectetur cursus in interdum.",
+  },
+  { 
+    question: "Lorem ipsum dolor sit amet consectetur. ",
+    answer: "Lorem ipsum dolor sit amet consectetur. Phasellus id mollis nunc turpis lacus. Habitant a justo mattis at aliquam facilisi purus mi viverra. Massa consectetur cursus in interdum.",
+  },
+  { 
+    question: "Lorem ipsum dolor sit amet consectetur. ",
+    answer: "Lorem ipsum dolor sit amet consectetur. Phasellus id mollis nunc turpis lacus. Habitant a justo mattis at aliquam facilisi purus mi viverra. Massa consectetur cursus in interdum.",
+  },
+  { 
+    question: "Lorem ipsum dolor sit amet consectetur. ",
+    answer: "Lorem ipsum dolor sit amet consectetur. Phasellus id mollis nunc turpis lacus. Habitant a justo mattis at aliquam facilisi purus mi viverra. Massa consectetur cursus in interdum.",
+  },
+  { 
+    question: "Lorem ipsum dolor sit amet consectetur. ",
+    answer: "Lorem ipsum dolor sit amet consectetur. Phasellus id mollis nunc turpis lacus. Habitant a justo mattis at aliquam facilisi purus mi viverra. Massa consectetur cursus in interdum.",
+  },
+  { 
+    question: "Lorem ipsum dolor sit amet consectetur. ",
+    answer: "Lorem ipsum dolor sit amet consectetur. Phasellus id mollis nunc turpis lacus. Habitant a justo mattis at aliquam facilisi purus mi viverra. Massa consectetur cursus in interdum.",
+  }
 ]

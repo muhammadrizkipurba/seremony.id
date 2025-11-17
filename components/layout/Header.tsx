@@ -11,7 +11,7 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <header className='custom-container py-6 flex items-center justify-between shadow-xs'>
+    <header className='custom-container py-6 flex items-center justify-between shadow-sm shadow-neutral-500 xl:shadow-neutral-300 bg-primary-cultures'>
       <Link href="/">
         <Image 
           src="/logo/logo-text-black-color.svg"

@@ -63,10 +63,10 @@ const SidebarMenu = () => {
       <HamburgerButton isOpen={open} handleClick={handleClick} />
       <Drawer
         isOpen={open}
-        className="w-full bg-white z-50"
+        className="w-full bg-primary-cultures z-50"
         onDismiss={handleDismiss}
       >
-        <nav>
+        <nav className='bg-primary-cultures'>
           <div className='shadow-xs px-3'>
             <div className={`flex items-center justify-between gap-8 py-5`}>
               <Image

@@ -19,15 +19,15 @@ const TextInput = ({
   onChange
 }: Props) => {
   return (
-    <div>
-      {label && <label className='ml-2 font-bold'>{label}</label> }
+    <div className='group'>
+      {label && <label className='text-sm uppercase text-black tracking-widest group-focus-within:text-primary-orange group-focus-within:font-semibold'>{label}</label> }
       <Input 
         id={id}
         type={type}
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className='bg-transparent border-gray-100 shadow-xs rounded-2xl px-4 py-5'
+        className='bg-transparent border-b-2 border-gray-200 shadow-none px-0 h-12! mt-0 focus-visible:ring-0 focus-visible:border-primary-orange'
       />
     </div>
   )
