@@ -14,7 +14,6 @@ const HamburgerButton = ({
   isOpen: boolean;
   handleClick: () => void;
 }) => {
-  console.log(isOpen)
   return (
     <button className="relative group" onClick={handleClick}>
       <div className="relative flex overflow-hidden items-center justify-center rounded-xl w-[42px] h-[42px] transform transition-all ring-0 duration-200 bg-primary-orange">
