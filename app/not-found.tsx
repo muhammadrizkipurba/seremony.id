@@ -1,11 +1,10 @@
-'use client'
 import React from 'react';
 import Link from "next/link";
 import { HiArrowLeft } from "react-icons/hi2";
-import { Player } from '@lottiefiles/react-lottie-player';
 import NotFoundLottie from '@/app/404-not-found.json';
 
 import MainLayout from "@/components/layout/MainLayout";
+import LottiePlayer from '@/components/LottiePlayer';
 
 export default function Custom404() {
   return (
@@ -24,7 +23,7 @@ export default function Custom404() {
               </Link>
             </div>
           </div>
-          <Player 
+          <LottiePlayer 
             src={NotFoundLottie}
             autoplay
             loop
