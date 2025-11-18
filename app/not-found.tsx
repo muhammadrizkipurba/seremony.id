@@ -6,7 +6,7 @@ import NotFoundLottie from '@/app/404-not-found.json';
 import MainLayout from "@/components/layout/MainLayout";
 import LottiePlayer from '@/components/LottiePlayer';
 
-export default function Custom404() {
+export default function NotFound() {
   return (
     <MainLayout>
       <main className="min-h-[50vh] custom-container pb-32 pt-20">
