@@ -1,10 +1,15 @@
+"use client"
 import React from 'react';
 import Link from "next/link";
+import dynamic from 'next/dynamic';
 import { HiArrowLeft } from "react-icons/hi2";
 import NotFoundLottie from '@/app/404-not-found.json';
 
 import MainLayout from "@/components/layout/MainLayout";
-import LottiePlayer from '@/components/LottiePlayer';
+
+const LottiePlayer = dynamic(() => import('../components/LottiePlayer'), {
+  ssr: false,
+});
 
 export default function NotFound() {
   return (
@@ -23,7 +28,7 @@ export default function NotFound() {
               </Link>
             </div>
           </div>
-          <LottiePlayer 
+          <LottiePlayer
             src={NotFoundLottie}
             autoplay
             loop
