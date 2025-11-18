@@ -10,7 +10,7 @@ const HomeHero = () => {
       <h1 className='text-4xl lg:text-6xl font-semibold tracking-tight text-center md:max-w-xl lg:max-w-[700px] mx-auto'>
         Hadirkan momen tak terlupakan di setiap acara spesial kamu
       </h1>
-      <div className='flex items-center justify-center gap-5 mt-10'>
+      <div className='flex items-center justify-center gap-5 mt-10 relative z-30'>
         <Link href="/seremony-assist" className='button-outline-orange ps-5 pe-3 py-2 text-sm flex items-center gap-2 hover:font-bold' >
           Seremony Assist
           <HiArrowLongRight />
