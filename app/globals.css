@@ -74,6 +74,28 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.styles-module_avatar__afcc4 img {
+  padding: 10px;
+}
+
+.styles-module_close__RLouK {
+  margin: auto;
+}
+
+.styles-module_input__WFb9L {
+  min-height: 40px!important;
+  border-radius: 8px!important;
+  font-size: 14px;
+}
+
+.styles-module_buttonSend__kXjja {
+  margin: auto!important;
+}
+
+.styles-module_buttonSend__kXjja svg {
+  fill: var(--color-primary-orange)!important;
+}
+
 .custom-container {
   @apply max-w-[1550px] px-5 mx-auto;
 }
