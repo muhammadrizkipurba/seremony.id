@@ -96,6 +96,10 @@ input[type=number] {
   fill: var(--color-primary-orange)!important;
 }
 
+.page-title {
+  @apply text-4xl lg:text-6xl font-semibold tracking-tight text-center md:max-w-xl lg:max-w-[700px] mx-auto;
+};
+
 .custom-container {
   @apply max-w-[1550px] px-5 mx-auto;
 }
