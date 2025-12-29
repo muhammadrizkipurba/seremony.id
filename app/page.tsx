@@ -15,6 +15,14 @@ import SeremonyAssistCard from "@/components/SeremonyAssistCard";
 export const metadata: Metadata = {
   title: "Seremony",
   description: "Seremony make it happen",
+  openGraph: {
+    type: "website",
+    url: process.env.WEB_URL,
+    title: "Seremony",
+    description: "Seremony make it happen",
+    siteName: "Seremony",
+    images: [{ url: "https://seremony.id/opengraph-image.png" }]
+  }
 };
 
 const EventCategories: EventCategoryType[] = [
