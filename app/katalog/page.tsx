@@ -1,5 +1,7 @@
 import MainLayout from '@/components/layout/MainLayout'
+import { EventPackagesGroupByThemeTypeResponse, SinglePackageType } from '@/types';
 import { Metadata } from 'next';
+import PackageCard from './PackageCard';
 
 export const metadata: Metadata = {
   title: "Seremony - Katalog",
@@ -14,7 +16,15 @@ export const metadata: Metadata = {
   }
 };
 
-const CatalogPage = () => {
+const CatalogPage = async () => {
+
+  let packagesData = [];
+  const res = await fetch(`${process.env.API_URL}/event-packages/group-by-theme/694d8b29b16cada45921e2f2`);
+  const data = await res.json();
+  if (data.status === 200) {
+    packagesData = data.data;
+  };
+
   return (
     <MainLayout>
       <main>
@@ -28,8 +38,29 @@ const CatalogPage = () => {
           </div>
         </div>
 
-        <div className='custom-container py-16'>
-          List paket
+        <div className='custom-container pb-16 pt-8'>
+          <div className='flex flex-col gap-y-4'>
+            {packagesData.length > 0 ?
+              packagesData.map((resData: EventPackagesGroupByThemeTypeResponse, idx: number) => {
+                return (
+                  <div key={idx}>
+                    <h2 className='text-xl md:text-2xl font-semibold my-4 uppercase'>Paket {resData.package_theme}</h2>
+                    {/* Render Packages Cards */}
+                    <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5'>
+                      {resData.packages.map((packageData: SinglePackageType) => {
+                        return (
+                          <PackageCard
+                            key={`package-${idx}-${packageData._id}`}
+                            packageData={packageData}
+                          />
+                        )
+                      })}
+                    </div>
+                  </div>
+                )
+              })
+              : null}
+          </div>
         </div>
       </main>
     </MainLayout>
