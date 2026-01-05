@@ -122,7 +122,7 @@ export default function Home() {
 
       <div className="max-w-[1550px] mx-auto">
         <Image
-          src="/images/banner.png"
+          src="/images/banner.jpeg"
           alt="seremony"
           height={540}
           width={1440}
