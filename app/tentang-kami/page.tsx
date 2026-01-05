@@ -14,7 +14,7 @@ const AboutUsPage = () => {
             <div className='lg:max-w-[70%] flex items-start flex-col justify-center gap-5'>
               <h1 className='page-title lg:text-5xl! text-left! ml-0! pl-0!'>Merancang Momen, Mewujudkan Impian</h1>
               <p>
-                Kami adalah perusahaan event planner yang berkomitmen menghadirkan acara terbaik untuk setiap momen penting Anda.
+                Setiap perayaan berawal dari mimpi dan harapan. Seremony hadir dengan sistem perencanaan yang terstruktur dan transparan, memberikan pendampingan yang jelas agar setiap momen terwujud dengan aman, tenang, dan tanpa repot.
               </p>
               <Link href="/kontak" className='button-primary-orange px-4 py-2 inline-flex gap-2 items-center text-sm font-semibold'>
                 Hubungi Kami
@@ -34,7 +34,7 @@ const AboutUsPage = () => {
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 bg-soft-gray p-5 md:p-8 lg:p-20'>
             <div className='lg:max-w-[400px]'>
               <h2 className='mb-3 text-3xl font-bold'>Visi</h2>
-              <p>Menjadi event planner terpercaya yang menghadirkan pengalaman tak terlupakan dengan sentuhan profesional dan kreatif.</p>
+              <p>Menjadi platform event design & management paling terpercaya yang menghadirkan perayaan indah, terarah, dan tenang melalui sistem yang rapi dan transparan.</p>
             </div>
             <div>
               <h2 className='mb-3 text-3xl font-bold'>Misi</h2>
