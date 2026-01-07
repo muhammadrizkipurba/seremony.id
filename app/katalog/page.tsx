@@ -42,6 +42,7 @@ const CatalogPage = async () => {
           <div className='flex flex-col gap-y-4'>
             {packagesData.length > 0 ?
               packagesData.map((resData: EventPackagesGroupByThemeTypeResponse, idx: number) => {
+                const { NEXT_PUBLIC_API_URL } = process.env;
                 return (
                   <div key={idx}>
                     <h2 className='text-xl md:text-2xl font-semibold my-4 uppercase'>Paket {resData.package_theme}</h2>
@@ -52,6 +53,7 @@ const CatalogPage = async () => {
                           <PackageCard
                             key={`package-${idx}-${packageData._id}`}
                             packageData={packageData}
+                            bannerImage={packageData.banner_image ? `${NEXT_PUBLIC_API_URL}/images/banners/${packageData.banner_image}` : "/images/package_banner.png"}
                           />
                         )
                       })}

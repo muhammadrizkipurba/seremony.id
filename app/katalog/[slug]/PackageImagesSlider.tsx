@@ -5,16 +5,24 @@ import "react-image-gallery/styles/css/image-gallery.css";
 
 const images = [
   {
-    original: "https://picsum.photos/id/1018/1000/600/",
-    thumbnail: "https://picsum.photos/id/1018/250/150/",
+    original: `${process.env.NEXT_PUBLIC_WEB_URL}/images/packages/banner-1.png`,
+    thumbnail: `${process.env.NEXT_PUBLIC_WEB_URL}/images/packages/banner-1.png`,
   },
   {
-    original: "https://picsum.photos/id/1015/1000/600/",
-    thumbnail: "https://picsum.photos/id/1015/250/150/",
+    original: `${process.env.NEXT_PUBLIC_WEB_URL}/images/packages/banner-2.png`,
+    thumbnail: `${process.env.NEXT_PUBLIC_WEB_URL}/images/packages/banner-2.png`,
   },
   {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
+    original: `${process.env.NEXT_PUBLIC_WEB_URL}/images/packages/banner-3.png`,
+    thumbnail: `${process.env.NEXT_PUBLIC_WEB_URL}/images/packages/banner-3.png`,
+  },
+  {
+    original: `${process.env.NEXT_PUBLIC_WEB_URL}/images/packages/banner-4.png`,
+    thumbnail: `${process.env.NEXT_PUBLIC_WEB_URL}/images/packages/banner-4.png`,
+  },
+  {
+    original: `${process.env.NEXT_PUBLIC_WEB_URL}/images/packages/banner-5.png`,
+    thumbnail: `${process.env.NEXT_PUBLIC_WEB_URL}/images/packages/banner-5.png`,
   },
 ];
 

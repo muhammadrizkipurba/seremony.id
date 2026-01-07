@@ -8,11 +8,13 @@ import { usePathname } from "next/navigation";
 import { HiArrowRight } from "react-icons/hi2";
 
 type Props = {
-  packageData: SinglePackageType
+  packageData: SinglePackageType;
+  bannerImage: string;
 };
 
 const PackageCard = ({
-  packageData
+  packageData,
+  bannerImage
 }: Props) => {
   const pathname = usePathname();
 
@@ -20,11 +22,12 @@ const PackageCard = ({
     <div className="transition-all ease-in-out duration-300 rounded-lg border-2 overflow-hidden p-3 hover:bg-primary-yellow/10 cursor-pointer hover:border-primary-orange">
       <Image
         alt={packageData.package_name}
-        src={"/images/package_banner.png"}
+        src={bannerImage}
         height={180}
         width={256}
         className="w-full h-[180px] rounded-md object-cover"
-        objectFit="cover"
+        // objectFit="cover"
+        unoptimized
       />
       <div className="mt-3">
         <h3 className="text-[16px] font-semibold capitalize tracking-tight cursor-default">
