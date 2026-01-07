@@ -3,7 +3,15 @@ import ImageGallery from "react-image-gallery";
 // import stylesheet if you're not already using CSS @import
 import "react-image-gallery/styles/css/image-gallery.css";
 
-const images = [
+type Props = {
+  bannerImages: {
+    original: string;
+    thumbnail: string;
+  }[] | [];
+};
+
+
+const default_images = [
   {
     original: `${process.env.NEXT_PUBLIC_WEB_URL}/images/packages/banner-1.png`,
     thumbnail: `${process.env.NEXT_PUBLIC_WEB_URL}/images/packages/banner-1.png`,
@@ -26,10 +34,12 @@ const images = [
   },
 ];
 
-const PackageImagesSlider = () => {
+const PackageImagesSlider = ({
+  bannerImages
+}: Props) => {
   return (
     <div>
-      <ImageGallery items={images} />
+      <ImageGallery items={bannerImages.length > 0 ? bannerImages : default_images} />
     </div>
   )
 }

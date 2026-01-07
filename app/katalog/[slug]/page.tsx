@@ -21,6 +21,11 @@ type Props = {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
+type BannerImgArray = {
+  original: string;
+  thumbnail: string;
+}[] | [];
+
 // Export the asynchronous generateMetadata function
 export async function generateMetadata(
   { params, searchParams }: Props,
@@ -38,11 +43,11 @@ export async function generateMetadata(
   // Optionally, access parent metadata
   const previousImages = (await parent).openGraph?.images || [];
 
-  if(isEmptyObject(packageMetadata)) return {
+  if (isEmptyObject(packageMetadata)) return {
     title: "Seremony",
     description: ""
   };
-  
+
   // Return the dynamic metadata
   return {
     title: "Seremony | " + packageMetadata.metadata.title,
@@ -69,13 +74,23 @@ const SinglePackagePage = async ({ params }: { params: Promise<{ slug: string }>
     packageData = data.data;
   };
 
+  let bannerImages: BannerImgArray = [];
+  if (!isEmptyObject(packageData)) {
+    bannerImages = packageData.images.map(imgFileName => {
+      return {
+        original: `${process.env.NEXT_PUBLIC_API_URL}/images/packages/${imgFileName}`,
+        thumbnail: `${process.env.NEXT_PUBLIC_API_URL}/images/packages/${imgFileName}`,
+      }
+    });
+  };
+
   return (
     <MainLayout>
       {!isEmptyObject(packageData) ?
         <main className='custom-container my-12'>
           <div className='grid grid-cols-1 lg:grid-cols-4 gap-10'>
             <div className='lg:col-span-3 min-h-[80vh]'>
-              <PackageImagesSlider />
+              <PackageImagesSlider bannerImages={bannerImages} />
               <div className='my-12'>
                 <h1 className='text-[40px] font-bold capitalize tracking-tight leading-12'>{packageData.package_name}</h1>
                 <div className="flex items-center my-2 gap-2">
