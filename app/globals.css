@@ -300,7 +300,7 @@ input[type=number] {
 
 .image-gallery-slides {
   border-radius: 24px!important;
-  height: 640px!important;
+  /* height: 87vh!important; */
 }
 
 .image-gallery-thumbnails-wrapper {

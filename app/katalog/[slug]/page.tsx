@@ -8,12 +8,13 @@ import NotFoundLottie from '@/app/404-not-found.json';
 import Link from 'next/link';
 
 import type { Metadata, ResolvingMetadata } from 'next';
-import { IoLogoWhatsapp } from 'react-icons/io5';
+import { IoCheckmark, IoLogoWhatsapp } from 'react-icons/io5';
 import BookingButton from './BookingButton';
 import PackageInfoDetails from './PackageInfoDetails';
 import LottiePlayer from '@/components/LottiePlayer';
 import { HiArrowLeft } from 'react-icons/hi2';
 import PackageImagesSlider from './PackageImagesSlider';
+import { BreadCrumbWrapper } from '@/components/BreadCrumb';
 
 // Define the type for the props passed to generateMetadata and the Page component
 type Props = {
@@ -86,14 +87,20 @@ const SinglePackagePage = async ({ params }: { params: Promise<{ slug: string }>
 
   return (
     <MainLayout>
+      <BreadCrumbWrapper
+        params={{ all: [
+          "katalog",
+          packageData.package_name
+        ]}}
+      />
       {!isEmptyObject(packageData) ?
-        <main className='custom-container my-12'>
+        <main className='custom-container mt-7 mb-12'>
           <div className='grid grid-cols-1 lg:grid-cols-4 gap-10'>
             <div className='lg:col-span-3 min-h-[80vh]'>
               <PackageImagesSlider bannerImages={bannerImages} />
-              <div className='my-12'>
-                <h1 className='text-[40px] font-bold capitalize tracking-tight leading-12'>{packageData.package_name}</h1>
-                <div className="flex items-center my-2 gap-2">
+              <div className='mt-12 lg:mb-12'>
+                <h1 className='text-4xl md:text-[40px] font-bold capitalize tracking-tight'>{packageData.package_name}</h1>
+                <div className="flex items-center my-2 gap-2 flex-wrap">
                   <div className="">
                     <small className="lg:text-lg">{packageData.quantity_pax} pax</small>
                   </div>
@@ -127,7 +134,30 @@ const SinglePackagePage = async ({ params }: { params: Promise<{ slug: string }>
                   }
                 </div>
               </div>
-              <hr className='my-5' />
+              <hr className='my-3 md:my-5'/>
+              {packageData.package_overview && 
+                <div dangerouslySetInnerHTML={{__html: packageData.package_overview}} className='py-3 mt-5 text-justify lg:text-left' />
+              }
+              {packageData.decoration_themes.length > 0 && 
+                <>
+                  <hr className='my-3 md:my-5'/>
+                  <h2 className='text-xl font-semibold mt-7'>Pilihan Tema Dekorasi :</h2>
+                  <ul className='mt-4'>
+                    {packageData.decoration_themes.map((theme, idx) => {
+                      return (
+                        <li key={`decoration-theme-${idx}`} className='mt-3'>
+                          <p className='flex items-center gap-2 font-semibold'>
+                            <IoCheckmark className='text-primary-orange font-bold' />
+                            {theme.name}
+                          </p>
+                          <p className='text-justify lg:text-left'>{theme.description}</p>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </>
+              }
+              <hr className='mb-5 mt-12' />
               <PackageInfoDetails packageData={packageData} />
             </div>
             <div className='h-full'>
@@ -144,7 +174,7 @@ const SinglePackagePage = async ({ params }: { params: Promise<{ slug: string }>
                     Hubungi Kami
                   </WhatsappButton>
                 </div>
-                <label className='font-bold text-[48px] md:text-[30px] xl:text-[48px] my-4 block'>IDR {rupiahFormat(packageData.sale_price)}</label>
+                <label className='font-bold text-[48px] md:text-[30px] xl:text-[44px] my-4 block'>IDR {rupiahFormat(packageData.sale_price)}</label>
                 <BookingButton packageId={packageData._id} />
               </div>
             </div>

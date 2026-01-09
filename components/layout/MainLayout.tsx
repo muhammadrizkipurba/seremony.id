@@ -1,9 +1,10 @@
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
 import Header from './Header'
 import Footer from './Footer';
 import NewsletterCard from './NewsletterCard';
 
 type Props = {
+  showBreadCrumb?: boolean;
   children: ReactNode;
 };
 
@@ -13,7 +14,6 @@ const MainLayout = ({
   return (
     <>
       <Header />
-
       <main>
         {children}
       </main>

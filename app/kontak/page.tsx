@@ -3,10 +3,19 @@ import { ContactInfo } from '@/constant'
 import React from 'react'
 import ContactForm from './ContactForm'
 import Faq from './Faq'
+import { BreadCrumbWrapper } from '@/components/BreadCrumb'
 
 const ContactUsPage = () => {
   return (
     <MainLayout>
+      <BreadCrumbWrapper
+        className="bg-primary-cultures"
+        params={{
+          all: [
+            "kontak"
+          ]
+        }}
+      />
       <main>
         <div className='relative overflow-x-hidden'>
           <div className='w-[120px] h-[120px] bg-secondary-green absolute -left-8 lg:left-0 -bottom-8 lg:bottom-0 scale-50 lg:scale-100 z-10' />

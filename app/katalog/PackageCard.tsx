@@ -30,26 +30,26 @@ const PackageCard = ({
         unoptimized
       />
       <div className="mt-3">
-        <h3 className="text-[16px] font-semibold capitalize tracking-tight cursor-default">
+        <h3 className="text-[16px] font-semibold capitalize tracking-tight cursor-default min-h-13">
           {packageData.package_name}
         </h3>
         <div className="flex items-center my-2 gap-2">
-          <div className="border border-primary-yellow px-2 rounded-full">
-            <small className="text-xs">{packageData.quantity_pax} pax</small>
+          <div className="border border-primary-yellow px-2 rounded-full mb-1">
+            <small className="text-xs block py-1">{packageData.quantity_pax} pax</small>
           </div>
           { packageData.include_catering && packageData.include_venue && 
-            <div className="border border-primary-yellow px-2 rounded-full">
-              <small className="text-xs">All in</small>
+            <div className="border border-primary-yellow px-2 rounded-full mb-1">
+              <small className="text-xs block py-1">All in</small>
             </div>
           }
           { !packageData.include_catering && packageData.include_venue && 
-            <div className="border border-primary-yellow px-2 rounded-full">
-              <small className="text-xs">Venue</small>
+            <div className="border border-primary-yellow px-2 rounded-full mb-1">
+              <small className="text-xs block py-1">Venue</small>
             </div>
           }
           { !packageData.include_catering && packageData.include_venue && 
-            <div className="border border-primary-yellow px-2 rounded-full">
-              <small className="text-xs">Tanpa Catering</small>
+            <div className="border border-primary-yellow px-2 rounded-full mb-1">
+              <small className="text-xs block py-1">Tanpa Catering</small>
             </div>
           }
           { !packageData.include_catering && !packageData.include_venue && null }
