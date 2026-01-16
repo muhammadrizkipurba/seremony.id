@@ -63,8 +63,8 @@ export const NavigationMenus = [
 
 export const ContactInfo = {
   email: { label: "Email", value: "halo@seremony.id" },
-  whatsapp: { label: "Whatsapp", value: "+6282276004999" },
-  phone_number: { label: "Whatsapp", value: "6282276004999" },
+  whatsapp: { label: "Whatsapp", value: "+6282260009814" },
+  phone_number: { label: "Whatsapp", value: "6282260009814" },
   address: { label: "Alamat", value: "Jl. Sei Batang Serangan no. 20F, Babura, Kec. Medan Baru, Kota Medan, Sumatera Utara 20222." },
 };
 

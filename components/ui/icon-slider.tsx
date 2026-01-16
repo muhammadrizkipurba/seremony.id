@@ -26,7 +26,7 @@ const IconSlider = ({
       {icons.map((item, idx) => {
         return (
           <Slider.Slide key={`icon-slide-${idx}`}>
-            <Image src={`/vendors-logo/${item.logo}`} alt="" className='w-auto h-12' width={120} height={100} />
+            <Image src={`/vendors-logo/${item.logo}`} alt="" className='w-auto h-15' width={120} height={100} />
           </Slider.Slide>
         )
       })}

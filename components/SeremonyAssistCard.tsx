@@ -16,7 +16,7 @@ const SeremonyAssistCard = () => {
             <p className="lg:max-w-[65%] my-9">
               Dengan fitur ini, Anda dapat dengan mudah menemukan event dan paket yang paling sesuai dengan kebutuhan, preferensi, dan anggaran Anda, sehingga setiap momen terasa lebih istimewa.
             </p>
-            <Link href="/seremony-assist" className="button-primary-orange px-4 py-2 inline-flex gap-2 items-center text-sm font-semibold">
+            <Link href="/explore" className="button-primary-orange px-4 py-2 inline-flex gap-2 items-center text-sm font-semibold">
               Lihat Selengkapnya
               <HiArrowRight />
             </Link>

@@ -1,12 +1,30 @@
 "use client"
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import { useState, useEffect } from "react";
 import { HiArrowLeft, HiArrowRight } from "react-icons/hi2";
 
 const bannerImages = [
-  "banner-promo-1.jpg",
-  "banner-promo-2.jpg",
-  "banner-promo-3.jpg",
+  {
+    image: "ten-couples.png",
+    href: '/katalog',
+    alt: '10 founding couples to be among the first with seremony'
+  },
+  {
+    image: "seremony-sweet-bar.png",
+    href: '/sweet-bar',
+    alt: 'Seremony sweet bar'
+  },
+  {
+    image: "more-than-event-planner.png",
+    href: '/tentang-kami',
+    alt: 'Tentang Seremony'
+  },
+  {
+    image: "more-about-us.png",
+    href: '/kontak',
+    alt: 'Hubungi Seremony'
+  }
 ];
 
 function CustomCarousel() {
@@ -71,13 +89,15 @@ function CustomCarousel() {
               className={"slider__item slider__item-active-" + (activeIndex + 1)}
               key={index}
             >
-              <Image
-                src={`/images/${item}`}
-                alt="promo banner"
-                width={1200}
-                height={400}
-                className="w-full h-[400px] object-contain md:object-cover md:object-top object-center mt-3"
-              />
+              <Link href={item.href}>
+                <Image
+                  src={`/promo-banners/${item.image}`}
+                  alt={item.href}
+                  width={1200}
+                  height={400}
+                  className="w-full h-[400px] object-contain md:object-top object-center mt-3"
+                />
+              </Link>
             </div>
           );
         })}

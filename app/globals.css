@@ -130,11 +130,11 @@ input[type=number] {
 }
 
 .slider__btn-next {
-  @apply bg-white h-12 w-12 absolute -right-[2%] shadow-sm top-1/2 flex items-center justify-center rounded-full text-2xl;
+  @apply bg-white h-12 w-12 absolute right-0 shadow-sm top-1/2 flex items-center justify-center rounded-full text-2xl;
 }
 
 .slider__btn-prev {
-  @apply bg-white h-12 w-12 absolute -left-[2%] shadow-sm top-1/2 flex items-center justify-center rounded-full text-2xl;
+  @apply bg-white h-12 w-12 absolute left-0 shadow-sm top-1/2 flex items-center justify-center rounded-full text-2xl;
 }
 
 .container__slider__links {

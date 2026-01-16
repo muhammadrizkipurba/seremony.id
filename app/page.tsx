@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     url: process.env.WEB_URL,
     title: "Seremony",
-    description: "Seremony make it happen",
+    description: "Seremony - platform event design & management paling terpercaya yang menghadirkan perayaan indah, terarah, dan tenang melalui sistem yang rapi dan transparan.",
     siteName: "Seremony",
     images: [{ url: "https://seremony.id/opengraph-image.png" }]
   }
@@ -29,7 +29,7 @@ const EventCategories: EventCategoryType[] = [
   {
     _id: "1",
     name: "Wedding",
-    slug: "wedding",
+    slug: "",
     icon: "wedding.svg"
   },
   {
@@ -64,36 +64,56 @@ const EventCategories: EventCategoryType[] = [
   },
 ];
 
-const vendorListIconData = [
+const vendorListIconData = [   
   { 
     _id: "1",
-    name: "Vendor 1",
-    logo: "vendor-1.png"
+    name: "Seis cafe",
+    logo: "seis.png"
   },
   { 
     _id: "2",
-    name: "Vendor 2",
-    logo: "vendor-2.png"
+    name: "Aceh Sepakat",
+    logo: "aceh-sepakat.png"
   },
   { 
     _id: "3",
-    name: "Vendor 3",
-    logo: "vendor-3.png"
+    name: "Andaliman Hall",
+    logo: "andaliman.png"
   },
   { 
     _id: "4",
-    name: "Vendor 4",
-    logo: "vendor-4.png"
+    name: "Boston Decoration",
+    logo: "boston.png"
   },
-  { 
-    _id: "5",
-    name: "Vendor 5",
-    logo: "vendor-5.png"
-  },
+  // { 
+  //   _id: "5",
+  //   name: "Grand Central Medan",
+  //   logo: "grand-central.png"
+  // },
   { 
     _id: "6",
-    name: "Vendor 6",
-    logo: "vendor-6.png"
+    name: "Kini Social Club",
+    logo: "kini-kitchen.PNG"
+  },
+  { 
+    _id: "7",
+    name: "Komma Ground",
+    logo: "komma.png"
+  },
+  { 
+    _id: "8",
+    name: "Plaza Millennium",
+    logo: "plaza-millennium.png"
+  },
+  { 
+    _id: "9",
+    name: "Rara Florist",
+    logo: "rara-florist.png"
+  },
+  { 
+    _id: "10",
+    name: "Asokaya",
+    logo: "asokaya.png"
   },
 ];
 
@@ -151,10 +171,10 @@ export default function Home() {
           />
           <div className="hidden xl:block absolute right-0 bottom-0 lg:max-w-[232px] xl:-translate-x-[70%] lg:-translate-y-2/3">
             <p className="text-white mb-10">
-              Lorem ipsum dolor sit amet consectetur. Tristique eu aliquam
+              Seremony hadir dengan sistem perencanaan yang terstruktur dan transparan.
               <br />
               <br />
-              Lorem ipsum dolor sit amet consectetur. Tristique eu aliquam sem non sit. Nulla blandit proin sed posuere interdum sem in
+              Platform event design & management paling terpercaya yang menghadirkan perayaan indah, terarah, dan tenang melalui sistem yang rapi dan transparan.
             </p>
             <Link href="/tentang-kami" className="border border-white rounded-full text-white px-4 py-2 inline-flex items-center justify-center gap-2 transition-all ease-in-out duration-300 hover:font-bold hover:scale-105">
               Lihat selengkapnya
@@ -164,10 +184,10 @@ export default function Home() {
         </div>
         <div className="custom-container block xl:hidden mt-12 pb-20">
           <p className="text-white mb-10">
-            Lorem ipsum dolor sit amet consectetur. Tristique eu aliquam
+            Seremony hadir dengan sistem perencanaan yang terstruktur dan transparan.
             <br />
             <br />
-            Lorem ipsum dolor sit amet consectetur. Tristique eu aliquam sem non sit. Nulla blandit proin sed posuere interdum sem in
+            Platform event design & management paling terpercaya yang menghadirkan perayaan indah, terarah, dan tenang melalui sistem yang rapi dan transparan.
           </p>
           <Link href="/tentang-kami" className="border border-white rounded-full text-white px-4 py-2 inline-flex items-center justify-center gap-2 transition-all ease-in-out duration-300 hover:font-bold hover:scale-105">
             Lihat selengkapnya
