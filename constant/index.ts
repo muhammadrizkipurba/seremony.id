@@ -69,10 +69,10 @@ export const ContactInfo = {
 };
 
 export const SocialMediaAccounts = [
-  { name: "instagram", link: "https://instagram.com/seremony.hub"},
-  { name: "tiktok", link: "https://instagram.com/@seremony.hub"},
-  { name: "facebook", link: "https://instagram.com/seremony.hub"},
-  { name: "youtube", link: "https://instagram.com/seremonyhub"},
+  { name: "instagram", link: "https://instagram.com/seremony.moments"},
+  { name: "tiktok", link: "https://instagram.com/@seremony.moments"},
+  // { name: "facebook", link: "https://instagram.com/seremony.hub"},
+  // { name: "youtube", link: "https://instagram.com/seremonyhub"},
 ];
 
 export const FAQs = [

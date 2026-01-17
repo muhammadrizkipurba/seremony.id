@@ -24,7 +24,9 @@ const PackageInfoDetails = ({
                       <span className='mt-1'>{item.vendor_options[0]}</span>
                     </div>
                     <p className='mt-1'>{item.vendor_info.address}</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.044611200672!2d98.64256817526511!3d3.577220850371502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312fed625b2493%3A0xc23df6a616b93f95!2sKINI%20SOCIAL%20CLUB!5e0!3m2!1sen!2sid!4v1767904921487!5m2!1sen!2sid" width="600" height="450" style={{border: 0}} className='w-full rounded-xl mt-4' allowFullScreen={false} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                    {item.vendor_info.google_map_location && 
+                      <iframe src={item.vendor_info.google_map_location} width="600" height="350" style={{border: 0}} className='w-full rounded-xl mt-4' allowFullScreen={false} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                    }
                   </li>
                 </ul>
                 : <ul className='grid grid-cols-1 md:grid-cols-2 gap-2 mt-2'>

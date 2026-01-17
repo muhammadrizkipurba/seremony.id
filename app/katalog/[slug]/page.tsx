@@ -97,8 +97,7 @@ const SinglePackagePage = async ({ params }: { params: Promise<{ slug: string }>
         <main className='custom-container mt-7 mb-12'>
           <div className='grid grid-cols-1 lg:grid-cols-4 gap-10'>
             <div className='lg:col-span-3 min-h-[80vh]'>
-              <PackageImagesSlider bannerImages={bannerImages} />
-              <div className='mt-12 lg:mb-12'>
+              <div className='mt-5 lg:mb-12'>
                 <h1 className='text-4xl md:text-[40px] font-bold capitalize tracking-tight'>{packageData.package_name}</h1>
                 <div className="flex items-center my-2 gap-2 flex-wrap">
                   <div className="">
@@ -134,6 +133,7 @@ const SinglePackagePage = async ({ params }: { params: Promise<{ slug: string }>
                   }
                 </div>
               </div>
+              <PackageImagesSlider bannerImages={bannerImages} />
               <hr className='my-3 md:my-5'/>
               {packageData.package_overview && 
                 <div dangerouslySetInnerHTML={{__html: packageData.package_overview}} className='py-3 mt-5 text-justify lg:text-left' />
