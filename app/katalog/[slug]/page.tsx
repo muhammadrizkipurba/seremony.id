@@ -142,10 +142,16 @@ const SinglePackagePage = async ({ params }: { params: Promise<{ slug: string }>
                   }
                 </div>
               </div>
-              <PackageImagesSlider bannerImages={bannerImages} />
-              <hr className='my-3 md:my-5'/>
+              { bannerImages.length > 0 && 
+                <>
+                  <PackageImagesSlider bannerImages={bannerImages} />
+                  <hr className='my-3 md:my-5'/>
+                </>
+              }
               {packageData.package_overview && 
-                <div dangerouslySetInnerHTML={{__html: packageData.package_overview}} className='py-3 mt-5 text-justify lg:text-left' />
+                <>
+                  <div dangerouslySetInnerHTML={{__html: packageData.package_overview}} className='py-3 mt-5 text-justify lg:text-left' />
+                </>
               }
               {packageData.decoration_themes.length > 0 && 
                 <>

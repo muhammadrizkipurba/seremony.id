@@ -57,7 +57,7 @@ export const NavigationMenus = [
   { label: "Tentang", href: "/tentang-kami"},
   { label: "Explore", href: "/explore"},
   { label: "Katalog", href: "/katalog"},
-  { label: "Vendor", href: "/vendor"},
+  // { label: "Vendor", href: "/vendor"},
   { label: "Kontak", href: "/kontak"},
 ];
 
