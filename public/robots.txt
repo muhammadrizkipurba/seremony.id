@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://seremony.id
+
+# Sitemaps
+Sitemap: https://seremony.id/sitemap.xml

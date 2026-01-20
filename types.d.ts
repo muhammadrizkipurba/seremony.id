@@ -26,6 +26,20 @@ type SpecialExperienceObject = {
   description: string;
 };
 
+export type PackageMetadataResponse = {
+   metadata: {
+    openGraph: {
+      type: string;
+      title: string;
+      description: string;
+    };
+    slug: string;
+    title: string;
+    description: string;
+  };
+  _id: string;
+}
+
 export type SinglePackageType = {
   metadata: {
     openGraph: {

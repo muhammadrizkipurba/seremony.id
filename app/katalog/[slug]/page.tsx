@@ -2,7 +2,7 @@ import MainLayout from '@/components/layout/MainLayout'
 import WhatsappButton from '@/components/WhatsappButton';
 import { ContactInfo } from '@/constant';
 import { isEmptyObject, rupiahFormat } from '@/lib/utils';
-import { SinglePackageType } from '@/types';
+import { PackageMetadataResponse, SinglePackageType } from '@/types';
 import { DotIcon } from 'lucide-react';
 import NotFoundLottie from '@/app/404-not-found.json';
 import Link from 'next/link';
@@ -62,8 +62,17 @@ export async function generateMetadata(
       images: [{ url: "https://seremony.id/opengraph-image.png" }]
     }
   };
-}
+};
 
+export async function generateStaticParams() {
+  const response = await fetch(`${process.env.API_URL}/sitemap`).then((res) => res.json());
+  let sitemaps = response.data.map((pkg: PackageMetadataResponse) => ({
+    id: pkg._id,
+    slug: pkg.metadata.slug, // Matches the [slug] in the filename
+  }));
+
+  return sitemaps;
+}
 
 const SinglePackagePage = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const slug = (await params).slug;
