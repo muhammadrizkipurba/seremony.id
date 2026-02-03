@@ -23,7 +23,7 @@ const EventCard = ({
     <div>
       <div className='transition-all ease-in-out duration-300 rounded-lg border-2 overflow-hidden p-3 hover:bg-primary-yellow/10 cursor-pointer hover:border-primary-orange'>
         <Image
-          unoptimized={true}
+          // unoptimized={true}
           src={`${NEXT_PUBLIC_API_URL}/images/events/${eventData.banner_image}`}
           alt={eventData.name}
           height={150}

@@ -25,7 +25,7 @@ const SingleEventPage = async ({ params }: { params: Promise<{ slug: string }> }
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
           <div className="col-span-3">
             <Image
-              unoptimized
+              // unoptimized
               src={`${NEXT_PUBLIC_API_URL}/images/events/${eventData.banner_image}`}
               alt=""
               height={150}
@@ -57,7 +57,7 @@ const SingleEventPage = async ({ params }: { params: Promise<{ slug: string }> }
               </div>
               <div className="flex flex-col lg:flex-row gap-4 mt-5">
                 <Image
-                  unoptimized
+                  // unoptimized
                   src={`${NEXT_PUBLIC_API_URL}/images/banners/higher-step.webp`}
                   alt=""
                   width={450}
