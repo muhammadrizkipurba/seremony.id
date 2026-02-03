@@ -57,7 +57,7 @@ export const NavigationMenus = [
   { label: "Tentang", href: "/tentang-kami"},
   { label: "Explore", href: "/explore"},
   { label: "Katalog", href: "/katalog"},
-  // { label: "Vendor", href: "/vendor"},
+  { label: "Event", href: "/event"},
   { label: "Kontak", href: "/kontak"},
 ];
 
@@ -148,4 +148,26 @@ export const FAQs = [
     question: "Apakah bisa konsultasi dulu tanpa komitmen?",
     answer: "Bisa. Konsultasi awal bertujuan agar kamu mendapatkan gambaran yang jelas sebelum memutuskan, tanpa kewajiban apa pun.",
   },
+];
+
+export const SeremonyEvents = [
+  {
+    _id: '1',
+    banner_image: "exclusive-wedding-experience-session.jpg",
+    name: 'Exclusive Wedding Experience Session',
+    slug: 'exclusive-wedding-experience-session',
+    event_start: {
+      date: '07-02-2026',
+      time: '09.00 WIB - 17.00 WIB'
+    },
+    event_end: {
+      date: '08-02-2026',
+      time: '09.00 WIB - 17.00 WIB'
+    },
+    event_location: {
+      location_name: "Higher Steps Dining",
+      address: "Jl. Sunggal, Tj. Rejo, Medan Sunggal, Medan City, North Sumatra 20122",
+      gmap_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4267.150664631155!2d98.62674467526506!3d3.5914564502739244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312fa7d08290f3%3A0x5ce6142db1c10d9d!2sHigher%20Steps%20Dining!5e1!3m2!1sen!2sid!4v1769617440911!5m2!1sen!2sid"
+    }
+  }
 ]

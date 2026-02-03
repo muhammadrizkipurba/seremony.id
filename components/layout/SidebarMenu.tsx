@@ -70,7 +70,7 @@ const SidebarMenu = () => {
             <div className={`flex items-center justify-between gap-8 py-5`}>
               <Image
                 src="/logo.svg"
-                alt='tipsy padel'
+                alt='Seremony'
                 height={80}
                 width={80}
                 className='h-8 w-auto'

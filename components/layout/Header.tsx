@@ -11,7 +11,7 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <header className='shadow-sm shadow-neutral-500 xl:shadow-neutral-300 bg-primary-cultures'>
+    <header className='shadow-xs shadow-neutral-300 xl:shadow-neutral-300 bg-primary-cultures sticky top-0 z-50 lg:static'>
       <div className='custom-container py-6 flex items-center justify-between'>
         <Link href="/">
           <Image 

@@ -23,4 +23,9 @@ export const isEmptyObject = (obj: object | null | undefined): boolean => {
   
   // For actual objects, check the number of own enumerable properties
   return Object.keys(obj).length === 0;
-}
+};
+
+export const isValidEmail = (email: string) => {
+  const Pattern = /^[A-Za-z0-9._]{3,}@[a-zA-Z]{3,}[.]{1,1}[a-zA-Z.]{2,6}$/g;
+  return Pattern.test(email);
+};

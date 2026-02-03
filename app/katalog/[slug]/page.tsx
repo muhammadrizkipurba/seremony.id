@@ -189,7 +189,7 @@ const SinglePackagePage = async ({ params }: { params: Promise<{ slug: string }>
                     Hubungi Kami
                   </WhatsappButton>
                 </div>
-                <label className='font-bold text-[48px] md:text-[30px] xl:text-[44px] my-4 block'>IDR {rupiahFormat(packageData.sale_price)}</label>
+                <label className='font-bold text-[48px] md:text-[30px] xl:text-[40px] my-4 block'>IDR {rupiahFormat(packageData.sale_price)}</label>
                 <BookingButton packageId={packageData._id} />
               </div>
             </div>

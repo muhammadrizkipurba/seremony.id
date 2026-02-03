@@ -63,6 +63,7 @@ export type SinglePackageType = {
     name: string;
     code: string;
   };
+  recommended: number;
   include_venue: boolean;
   include_catering: boolean;
   quantity_pax: number;
@@ -84,6 +85,26 @@ export type SinglePackageType = {
 };
 
 export type EventPackagesGroupByThemeTypeResponse = {
-  package_theme: string;
+  package_theme?: string;
   packages: SinglePackageType[];
 };
+
+export type SingleSeremonyEvent = {
+  _id: string;
+  name: string;
+  banner_image: string;
+  slug: string;
+  event_start: {
+    date: string;
+    time: string;
+  };
+  event_end: {
+    date: string;
+    time: string;
+  };
+  event_location: {
+    location_name: string;
+    address: string;
+    gmap_url: string;
+  };
+}

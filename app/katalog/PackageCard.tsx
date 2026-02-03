@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { HiArrowRight } from "react-icons/hi2";
+import { IoStar } from "react-icons/io5";
 
 type Props = {
   packageData: SinglePackageType;
@@ -20,15 +21,26 @@ const PackageCard = ({
 
   return (
     <div className="transition-all ease-in-out duration-300 rounded-lg border-2 overflow-hidden p-3 hover:bg-primary-yellow/10 cursor-pointer hover:border-primary-orange">
-      <Image
-        alt={packageData.package_name}
-        src={bannerImage}
-        height={180}
-        width={256}
-        className="w-full h-[180px] rounded-md object-cover"
-        // objectFit="cover"
-        unoptimized
-      />
+      <div className="relative">
+        <Image
+          alt={packageData.package_name}
+          src={bannerImage}
+          height={180}
+          width={256}
+          className="w-full h-[180px] rounded-md object-cover"
+          // objectFit="cover"
+          unoptimized
+        />
+        <div className="bg-primary-yellow px-2 rounded-lg mb-1 absolute top-2 right-2">
+          <small className="text-sm font-bold block py-1">{packageData.package_theme.name}</small>
+        </div>
+        {packageData.recommended > 0 && 
+          <div className="bg-primary-yellow px-2 rounded-lg mb-1 absolute bottom-2 left-2 flex items-center gap-2">
+            <IoStar className="text-sm" />
+            <small className="text-sm block py-1 mt-0.5">Penawaran terbaik</small>
+          </div>
+        }
+      </div>
       <div className="mt-3">
         <h3 className="text-[16px] font-semibold capitalize tracking-tight cursor-default min-h-13">
           {packageData.package_name}
