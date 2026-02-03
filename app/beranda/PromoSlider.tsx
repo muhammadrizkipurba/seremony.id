@@ -6,6 +6,11 @@ import { HiArrowLeft, HiArrowRight } from "react-icons/hi2";
 
 const bannerImages = [
   {
+    image: "exclusive-wedding-experience-session.jpeg",
+    href: '/event/exclusive-wedding-experience-session',
+    alt: 'Exclusive wedding experience session by Seremony'
+  },
+  {
     image: "ten-couples.png",
     href: '/katalog',
     alt: '10 founding couples to be among the first with seremony'

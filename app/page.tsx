@@ -85,11 +85,11 @@ const vendorListIconData = [
     name: "Boston Decoration",
     logo: "boston.png"
   },
-  // { 
-  //   _id: "5",
-  //   name: "Grand Central Medan",
-  //   logo: "grand-central.png"
-  // },
+  { 
+    _id: "5",
+    name: "Susi Catering Medan",
+    logo: "susi-catering.svg"
+  },
   { 
     _id: "6",
     name: "Kini Social Club",
