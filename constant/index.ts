@@ -153,7 +153,7 @@ export const FAQs = [
 export const SeremonyEvents = [
   {
     _id: '1',
-    banner_image: "exclusive-wedding-experience-session.jpg",
+    banner_image: "exclusive-wedding-experience-session.jpeg",
     name: 'Exclusive Wedding Experience Session',
     slug: 'exclusive-wedding-experience-session',
     event_start: {
