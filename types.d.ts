@@ -26,6 +26,11 @@ type SpecialExperienceObject = {
   description: string;
 };
 
+export type EventSitemapResponse = {
+  _id: string;
+  slug: string;
+}
+
 export type PackageMetadataResponse = {
    metadata: {
     openGraph: {

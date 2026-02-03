@@ -1,9 +1,62 @@
 import { BreadCrumbWrapper } from "@/components/BreadCrumb";
 import MainLayout from "@/components/layout/MainLayout";
 import { SeremonyEvents } from "@/constant";
-import { SingleSeremonyEvent } from "@/types";
+import { EventSitemapResponse, SingleSeremonyEvent } from "@/types";
 import Image from "next/image";
 import RegisterEventForm from "./RegisterEventForm";
+import { Metadata, ResolvingMetadata } from "next";
+
+type Props = {
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+};
+
+// Export the asynchronous generateMetadata function
+export async function generateMetadata(
+  { params, searchParams }: Props,
+  parent: ResolvingMetadata // Optional: access and extend parent metadata
+): Promise<Metadata> {
+  // Access the dynamic parameters using 'await'
+  const slug = (await params).slug;
+
+  // // Fetch package data based on the dynamic ID
+  // let packageMetadata: SingleSeremonyEvent | Record<string, never> = {};
+  // const responseData = await fetch(`${process.env.API_URL}/event-packages/details/${slug}`).then((res) => res.json());
+
+  // if (responseData.status === 200) packageMetadata = responseData.data;
+
+  // // Optionally, access parent metadata
+  // const previousImages = (await parent).openGraph?.images || [];
+
+  // if (isEmptyObject(packageMetadata)) return {
+  //   title: "Seremony",
+  //   description: ""
+  // };
+
+  // Return the dynamic metadata
+  return {
+    title: "Seremony | Exclusive Wedding Experience Session",
+    description: "Exclusive Wedding Experience Session adalah acara pengalaman pernikahan yang dirancang untuk memperlihatkan dan membuktikan bagaimana Seremony bekerja sebagai wedding orchestrator—mengelola, menyusun, dan mengawal seluruh elemen pernikahan dalam satu sistem yang rapi, transparan, dan terkoordinasi.",
+    openGraph: {
+      type: 'website',
+      url: `${process.env.WEB_URL}/event/exclusive-wedding-experience-session`,
+      title: "Seremony | Exclusive Wedding Experience Session",
+      description: "Exclusive Wedding Experience Session adalah acara pengalaman pernikahan yang dirancang untuk memperlihatkan dan membuktikan bagaimana Seremony bekerja sebagai wedding orchestrator—mengelola, menyusun, dan mengawal seluruh elemen pernikahan dalam satu sistem yang rapi, transparan, dan terkoordinasi.",
+      siteName: "Seremony",
+      images: [{ url: "https://seremony.id/opengraph-image.png" }]
+    }
+  };
+};
+
+export async function generateStaticParams() {
+  const response = await fetch(`${process.env.API_URL}/sitemap/events`).then((res) => res.json());
+  let sitemaps = response.data.map((pkg: EventSitemapResponse) => ({
+    id: pkg._id,
+    slug: pkg.slug, // Matches the [slug] in the filename
+  }));
+
+  return sitemaps;
+}
 
 const SingleEventPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const slug = (await params).slug;
