@@ -1,11 +1,13 @@
 "use client"
-import React, { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { Drawer } from '../ui/drawer';
 import Image from 'next/image';
 import Link from 'next/link';
 import { HiArrowLongRight } from 'react-icons/hi2';
 import { NavigationMenus } from '@/constant';
 import { usePathname } from 'next/navigation';
+import { getCookie } from 'cookies-next/client';
+import { FaUserCircle } from 'react-icons/fa';
 
 const HamburgerButton = ({
   isOpen,
@@ -34,7 +36,18 @@ const HamburgerButton = ({
 
 const SidebarMenu = () => {
   const pathname = usePathname();
+  const authCookie = getCookie("auth");
+
   const [open, setOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+
+
+  useEffect(() => {
+    if (authCookie) {
+      const { isAuthenticated } = JSON.parse(authCookie);
+      setIsLoggedIn(isAuthenticated);
+    };
+  }, [authCookie]);
 
   useEffect(() => {
     if (open) {
@@ -56,6 +69,8 @@ const SidebarMenu = () => {
   const handleDismiss = useCallback(() => {
     setOpen(false);
   }, []);
+
+  console.log(pathname)
 
   return (
     <div>
@@ -82,13 +97,21 @@ const SidebarMenu = () => {
           </div>
           <div className='flex flex-col h-[90vh] justify-between py-10'>
             <ul className='px-3'>
+              {isLoggedIn &&
+                <li key={`nav-menu-profile`} className={`border ${pathname === "/profile" ? "bg-primary-orange" : "bg-neutral-200"} p-3 mb-2 -my-2 rounded-xl`}>
+                  <Link href="/profile" className={`nav-link text-[32px] ${pathname === "/profile" && "text-white"} font-semibold flex items-center justify-center gap-3`}>
+                    <FaUserCircle />
+                    Profile
+                  </Link>
+                </li>
+              }
               {NavigationMenus.map((item, idx) => {
                 const isActive = pathname === item.href;
                 return (
                   <li key={`nav-menu-${idx}`} className='border-b border-b-black py-3'>
                     <Link href={item.href} className={`nav-link text-[32px] ${isActive && "text-primary-orange font-semibold flex items-center gap-2"}`}>
-                      {isActive && 
-                        <Image 
+                      {isActive &&
+                        <Image
                           src={"/logo/logo-color.svg"}
                           alt=""
                           height={20}
@@ -102,16 +125,18 @@ const SidebarMenu = () => {
               })}
             </ul>
 
-            <div className='space-x-3 flex items-center px-3'>
-              <Link href="/login" className='flex-1 justify-center button-outline-orange ps-5 pe-3 py-2 text-sm flex items-center gap-2 hover:font-bold' >
-                Login
-                <HiArrowLongRight />
-              </Link>
-              <Link href="/daftar-akun" className='flex-1 justify-center button-primary-orange ps-5 pe-3 py-2 text-sm flex items-center gap-2 hover:font-bold' >
-                Daftar
-                <HiArrowLongRight />
-              </Link>
-            </div>
+            {!isLoggedIn &&
+              <div className='space-x-3 flex items-center px-3'>
+                <Link href="/login" className='flex-1 justify-center button-outline-orange ps-5 pe-3 py-2 text-sm flex items-center gap-2 hover:font-bold' >
+                  Login
+                  <HiArrowLongRight />
+                </Link>
+                <Link href="/daftar-akun" className='flex-1 justify-center button-primary-orange ps-5 pe-3 py-2 text-sm flex items-center gap-2 hover:font-bold' >
+                  Daftar
+                  <HiArrowLongRight />
+                </Link>
+              </div>
+            }
           </div>
         </nav>
       </Drawer>

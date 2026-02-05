@@ -29,7 +29,7 @@ const PackageCard = ({
           width={256}
           className="w-full h-[180px] rounded-md object-cover"
           // objectFit="cover"
-          // unoptimized
+          unoptimized={process.env.NODE_ENV === 'development'}
         />
         <div className="bg-primary-yellow px-2 rounded-lg mb-1 absolute top-2 right-2">
           <small className="text-sm font-bold block py-1">{packageData.package_theme.name}</small>

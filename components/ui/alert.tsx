@@ -20,7 +20,7 @@ const Alert = ({options}: {options: AlertPropsType}) => {
   if(variant === "error") color_theme_classname = "bg-red-200 border-red-500 text-red-700";
 
   return (
-    <div className={`border-2 rounded-xl p-4 ${color_theme_classname} mt-8`}>
+    <div className={`border-2 rounded-xl p-4 ${color_theme_classname} mt-4`}>
       <label className="font-black uppercase">{title}</label>
       <p className={`tracking-tight leading-6 ${!title && "font-semibold"}`}>{message}</p>
     </div>
