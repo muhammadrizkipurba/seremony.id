@@ -9,7 +9,6 @@ export async function generateSitemaps() {
     slug: pkgMetadata.metadata.slug, // For generateSitemaps
   }));
 
-  console.log(result);
   return result
 }
 

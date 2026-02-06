@@ -1,9 +1,7 @@
-'use client'
 import MainLayout from '@/components/layout/MainLayout'
-import LoginForm from './LoginForm'
-import { Suspense } from 'react'
+import ForgotPasswordForm from './ForgotPasswordForm'
 
-const LoginPage = () => {
+const ForgotPassword = () => {
   return (
     <MainLayout>
       <main className="min-h-[50vh] custom-container py-10 lg:py-20">
@@ -12,16 +10,9 @@ const LoginPage = () => {
             <div className='bg-secondary-green w-3 h-30 md:w-[60px] md:h-60 absolute left-0 top-0 rounded-br-xl' />
             <div className='bg-secondary-red w-3 h-30 md:w-10 md:h-60 absolute right-0 bottom-0 rounded-tl-md bg-[url("/patterns/small-pattern-vertical.png")] bg-cover bg-center'/>
             <div className='z-50'>
-              <h1 className='text-2xl md:text-3xl lg:text-4xl font-semibold'>Login</h1>
-              <p className='leading-5 mt-4'>
-                Mulai persiapan pernikahan Anda dengan
-                <br />
-                penawaran terbaik & fitur eksklusif di Seremony
-              </p>
+              <h1 className='text-2xl md:text-3xl lg:text-4xl font-semibold'>Lupa Password</h1>
               <div className='lg:max-w-[500px] mx-auto'>
-                <Suspense>
-                  <LoginForm />
-                </Suspense>
+                <ForgotPasswordForm />
               </div>
             </div>
           </div>
@@ -35,4 +26,4 @@ const LoginPage = () => {
   )
 }
 
-export default LoginPage
+export default ForgotPassword

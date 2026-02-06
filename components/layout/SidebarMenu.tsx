@@ -70,8 +70,6 @@ const SidebarMenu = () => {
     setOpen(false);
   }, []);
 
-  console.log(pathname)
-
   return (
     <div>
       <HamburgerButton isOpen={open} handleClick={handleClick} />

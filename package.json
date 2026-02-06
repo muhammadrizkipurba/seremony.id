@@ -7,7 +7,8 @@
     "build": "next build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "debug": "next build --debug-prerender"
   },
   "dependencies": {
     "@bprogress/next": "^3.2.12",

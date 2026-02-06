@@ -114,12 +114,12 @@ const LoginForm = () => {
           value={password}
           onChange={({ target }) => {
             deleteErrorHandler(target.name);
-            setPassword(target.value.toLowerCase().trim())
+            setPassword(target.value.trim())
           }}
           error={errors?.password}
         />
         <div className="flex items-center justify-end gap-2 text-sm">
-          <Link href="/daftar-akun" className="font-semibold transition-all ease-in-out duration-300 text-primary-orange hover:scale-105">
+          <Link href="/forgot-password" className="font-semibold transition-all ease-in-out duration-300 text-primary-orange hover:scale-105">
             Lupa Password?
           </Link>
         </div>

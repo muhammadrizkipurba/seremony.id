@@ -37,9 +37,12 @@ export async function generateMetadata(
 
   // Fetch package data based on the dynamic ID
   let packageMetadata: SinglePackageType | Record<string, never> = {};
-  const responseData = await fetch(`${process.env.API_URL}/event-packages/details/${slug}`).then((res) => res.json());
 
-  if (responseData.status === 200) packageMetadata = responseData.data;
+  if(slug) {
+    const responseData = await fetch(`${process.env.API_URL}/event-packages/details/${slug}`).then((res) => res.json());
+  
+    if (responseData.status === 200) packageMetadata = responseData.data;
+  }
 
   // Optionally, access parent metadata
   const previousImages = (await parent).openGraph?.images || [];

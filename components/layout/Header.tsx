@@ -2,14 +2,16 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { HiArrowLongRight } from "react-icons/hi2";
 import { FaUserCircle } from "react-icons/fa";
 import { NavigationMenus } from '@/constant';
 import SidebarMenu from './SidebarMenu';
-import { getCookie } from 'cookies-next/client';
+import { deleteCookie, getCookie } from 'cookies-next/client';
+import { IoLogOutOutline } from 'react-icons/io5';
 
 const Header = () => {
+  const router = useRouter();
   const pathname = usePathname();
   const authCookie = getCookie("auth");
 
@@ -30,6 +32,12 @@ const Header = () => {
   useEffect(() => {
     setIsOpenSidebar(false);
   }, [pathname]);
+
+  const onLogout = () => {
+    deleteCookie("auth");
+    setIsLoggedIn(false);
+    router.push("/login");
+  };
 
   return (
     <header className='shadow-xs shadow-neutral-300 xl:shadow-neutral-300 bg-primary-cultures sticky top-0 z-50 lg:static'>
@@ -72,6 +80,9 @@ const Header = () => {
                     Profil Saya
                   </div>
                 </Link>
+                <button onClick={onLogout} className='bg-secondary-red rounded-2xl text-[1.30rem] p-3 py-2 text-white flex items-center hover:font-bold' >
+                  <IoLogOutOutline />
+                </button>
               </li>
               : <li className='space-x-3 flex items-center'>
                 <Link href="/login" className='button-outline-orange ps-5 pe-3 py-2 text-sm flex items-center gap-2 hover:font-bold' >

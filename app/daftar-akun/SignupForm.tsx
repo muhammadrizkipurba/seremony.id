@@ -157,7 +157,7 @@ const SignupForm = () => {
           value={password}
           onChange={({ target }) => {
             deleteErrorHandler(target.name);
-            setPassword(target.value.toLowerCase().trim())
+            setPassword(target.value.trim())
           }}
           error={errors?.password}
           disabled={isLoading}
@@ -171,7 +171,7 @@ const SignupForm = () => {
           value={confirmPassword}
           onChange={({ target }) => {
             deleteErrorHandler(target.name);
-            setConfirmPassword(target.value.toLowerCase().trim())
+            setConfirmPassword(target.value.trim())
           }}
           error={errors?.confirmPassword}
           disabled={isLoading}

@@ -1,9 +1,8 @@
-'use client'
 import MainLayout from '@/components/layout/MainLayout'
-import LoginForm from './LoginForm'
+import ResetPasswordForm from './ResetPasswordForm'
 import { Suspense } from 'react'
 
-const LoginPage = () => {
+const page = () => {
   return (
     <MainLayout>
       <main className="min-h-[50vh] custom-container py-10 lg:py-20">
@@ -12,22 +11,17 @@ const LoginPage = () => {
             <div className='bg-secondary-green w-3 h-30 md:w-[60px] md:h-60 absolute left-0 top-0 rounded-br-xl' />
             <div className='bg-secondary-red w-3 h-30 md:w-10 md:h-60 absolute right-0 bottom-0 rounded-tl-md bg-[url("/patterns/small-pattern-vertical.png")] bg-cover bg-center'/>
             <div className='z-50'>
-              <h1 className='text-2xl md:text-3xl lg:text-4xl font-semibold'>Login</h1>
-              <p className='leading-5 mt-4'>
-                Mulai persiapan pernikahan Anda dengan
-                <br />
-                penawaran terbaik & fitur eksklusif di Seremony
-              </p>
-              <div className='lg:max-w-[500px] mx-auto'>
+              <h1 className='text-2xl md:text-3xl lg:text-4xl font-semibold'>Reset Password</h1>
+              <div className='lg:max-w-[500px] mx-auto mt-8'>
                 <Suspense>
-                  <LoginForm />
+                  <ResetPasswordForm />
                 </Suspense>
               </div>
             </div>
           </div>
 
           <div className='min-h-[50vh] w-full relative hidden md:block'>
-            <div className='h-full w-full absolute right-0 bottom-0 bg-[url("/images/login.png")] bg-cover bg-center -z-10'/> 
+            <div className='h-full w-full absolute right-0 bottom-0 bg-[url("/images/login.png")] bg-cover bg-left -z-10'/> 
           </div>
         </div>
       </main>
@@ -35,4 +29,4 @@ const LoginPage = () => {
   )
 }
 
-export default LoginPage
+export default page

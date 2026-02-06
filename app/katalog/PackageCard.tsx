@@ -69,7 +69,7 @@ const PackageCard = ({
         <p className="cursor-default text-[20px] font-bold">IDR {rupiahFormat(packageData.sale_price)}</p>
       </div>
       <div className="mt-3">
-        <Link href={`${pathname}/${packageData.metadata.slug}`} className="inline-flex gap-2 items-center justify-center rounded-md text-white text-[14px] hover:font-semibold hover:bg-primary-orange bg-primary-orange/90 w-full p-2 transition-all ease-in-out duration-300 cursor-pointer">
+        <Link href={`${pathname}/${packageData?.metadata?.slug}`} className="inline-flex gap-2 items-center justify-center rounded-md text-white text-[14px] hover:font-semibold hover:bg-primary-orange bg-primary-orange/90 w-full p-2 transition-all ease-in-out duration-300 cursor-pointer">
           Lihat Detail 
           <HiArrowRight />
         </Link>

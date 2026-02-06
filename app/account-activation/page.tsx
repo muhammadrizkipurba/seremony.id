@@ -1,5 +1,6 @@
 import MainLayout from '@/components/layout/MainLayout'
 import AccountActivationForm from './AccountActivationForm'
+import { Suspense } from 'react'
 
 const AccountActivationPage = () => {
   return (
@@ -12,7 +13,9 @@ const AccountActivationPage = () => {
             <div className='z-50'>
               <h1 className='text-2xl md:text-3xl lg:text-4xl font-semibold'>Aktivasi Akun</h1>
               <div className='lg:max-w-[500px] mx-auto mt-8'>
-                <AccountActivationForm />
+                <Suspense>
+                  <AccountActivationForm />
+                </Suspense>
               </div>
             </div>
           </div>

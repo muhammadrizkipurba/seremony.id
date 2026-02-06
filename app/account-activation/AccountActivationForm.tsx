@@ -108,6 +108,7 @@ const AccountActivationForm = () => {
       </div>
     )
   };
+  
   return (
     <form onSubmit={submitHandler}>
       <p>Tekan tombol Aktivasi Akun di bawah untuk aktivasi akun Anda.</p>
