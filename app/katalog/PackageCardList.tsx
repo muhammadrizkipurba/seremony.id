@@ -47,12 +47,12 @@ const PackageCardList = ({
       {packagesData.length > 0 ?
         <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5'>
           {packagesData.map((packageData: SinglePackageType, idx: number) => {
-            const { NEXT_PUBLIC_API_URL } = process.env;
+            // const { NEXT_PUBLIC_API_URL } = process.env;
             return (
               <PackageCard
                 key={`package-${idx}-${packageData._id}`}
                 packageData={packageData}
-                bannerImage={packageData.banner_image ? `${NEXT_PUBLIC_API_URL}/images/banners/${packageData.banner_image}` : "/images/package_banner.png"}
+                bannerImage={packageData.banner_image ? `https://admin.seremony.id/api/images/banners/${packageData.banner_image}` : "/images/package_banner.png"}
               />
             )
           })}

@@ -24,7 +24,6 @@ const TextInput = ({
   error,
   onChange
 }: Props) => {
-  console.log(error)
   return (
     <div className='group'>
       {label && <label className='text-sm uppercase text-black tracking-widest group-focus-within:text-primary-orange group-focus-within:font-semibold'>{label}</label> }

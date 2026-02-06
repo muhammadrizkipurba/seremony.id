@@ -26,7 +26,7 @@ const PackageCard = ({
           alt={packageData.package_name}
           src={bannerImage}
           height={180}
-          width={256}
+          width={480}
           className="w-full h-[180px] rounded-md object-cover"
           // objectFit="cover"
           unoptimized={process.env.NODE_ENV === 'development'}
