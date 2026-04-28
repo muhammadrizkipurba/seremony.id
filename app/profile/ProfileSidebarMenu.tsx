@@ -5,7 +5,8 @@ import { usePathname, useRouter } from "next/navigation"
 import { RiLogoutBoxLine } from "react-icons/ri";
 import { FaListCheck, FaUserGear } from "react-icons/fa6";
 import { PiBookOpenText } from "react-icons/pi";
-import { LuCircleUser } from "react-icons/lu"
+import { LuCircleUser } from "react-icons/lu";
+import { BsCalendar2WeekFill } from "react-icons/bs";
 import { deleteCookie } from "cookies-next/client";
 
 export const ProfileSidebarMenus = [
@@ -13,13 +14,13 @@ export const ProfileSidebarMenus = [
     slug: "",
     label: "Profile",
   },
-  // {
-  //   slug: "riwayat-pemesanan",
-  //   label: "Riwayat Pemesanan",
-  // },
   {
-    slug: "progress-tracker",
-    label: "Progress Tracker",
+    slug: "meeting-tracker",
+    label: "Meeting Tracker",
+  },
+  {
+    slug: "production-tracker",
+    label: "Production Tracker",
   },
 ]
 
@@ -60,7 +61,9 @@ const ProfileSidebarMenu = () => {
                     <FaUserGear className="h-5 w-6"/>
                   : item.slug === "riwayat-pemesanan" ? 
                     <PiBookOpenText className="h-5 w-5" />
-                  : item.slug === "progress-tracker" ? 
+                  : item.slug === "meeting-tracker" ? 
+                    <BsCalendar2WeekFill className="h-5 w-5" />
+                  : item.slug === "production-tracker" ? 
                     <FaListCheck className="h-5 w-5" />
                   : null}
                   {item.label}

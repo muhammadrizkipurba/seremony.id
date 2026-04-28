@@ -21,11 +21,11 @@ const ProgressTrackerPage = async () => {
           <div className='md:col-span-2 lg:col-span-1'>
             <ProfileSidebarMenu />
           </div>
-          {user && user.email === "rizki.seremony@gmail.com" ?
+          {user && user.email === "zainalnst1995@gmail.com" ?
             <div className='md:col-span-2 lg:col-span-3'>
               <div className='bg-soft-gray p-4 rounded-xl'>
                 <div className='flex justify-between items-center'>
-                  <h1 className='text-xl font-bold'>Progress Tracker</h1>
+                  <h1 className='text-xl font-bold'>Production Tracker</h1>
                   <button className='flex items-center gap-1 bg-primary-orange/90 hover:bg-primary-orange text-gray-50 hover:text-white px-3 py-1.5 rounded-full transition-all ease-in-out duration-300 cursor-pointer'>
                     <IoReloadOutline size={14} />
                     <small className='hidden lg:block cursor-pointer!'>Refresh</small>

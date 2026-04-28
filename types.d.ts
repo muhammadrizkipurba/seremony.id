@@ -112,4 +112,32 @@ export type SingleSeremonyEvent = {
     address: string;
     gmap_url: string;
   };
-}
+};
+
+export type VendorDecisionChangeLog = {
+  category_value: string;
+  updated_date: string;
+  updated_by: string;
+  diff: {
+    status: string;
+    notes: string;
+    value: string;
+  };
+};
+
+export type ChangeOrderSummary = {
+  item_name: string;
+  description: string;
+  price_impact: number;
+};
+
+export type SingleMeetingDataProps = {
+  code: string;
+  title: string;
+  agendas: {
+    name: string;
+    description: string;
+  }[];
+  changes_log: VendorDecisionChangeLog[];
+  change_order_summary: ChangeOrderSummary[]
+};
