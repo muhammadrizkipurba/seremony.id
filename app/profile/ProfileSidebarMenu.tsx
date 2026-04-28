@@ -7,7 +7,7 @@ import { FaListCheck, FaUserGear } from "react-icons/fa6";
 import { PiBookOpenText } from "react-icons/pi";
 import { LuCircleUser } from "react-icons/lu";
 import { BsCalendar2WeekFill } from "react-icons/bs";
-import { deleteCookie } from "cookies-next/client";
+import { deleteCookie, getCookie } from "cookies-next/client";
 
 export const ProfileSidebarMenus = [
   {
@@ -28,6 +28,14 @@ const ProfileSidebarMenu = () => {
   const router = useRouter();
   const pathname = usePathname();
 
+  const authCookie = getCookie("auth");
+  let userData = null;
+
+  if(authCookie) {
+    const { user } = JSON.parse(authCookie);
+    userData = user;
+  };
+
   const onLogout = () => {
     deleteCookie("auth");
     router.push("/login");
@@ -39,7 +47,7 @@ const ProfileSidebarMenu = () => {
         <LuCircleUser className="text-4xl"/>
         <div className="flex flex-col gap-0">
           <span className="leading-5 text-sm">Welcome back</span>
-          <span className="leading-5 font-bold uppercase">Zainal</span>
+          <span className="leading-5 font-bold uppercase">{userData?.name}</span>
         </div>
       </div>
       
