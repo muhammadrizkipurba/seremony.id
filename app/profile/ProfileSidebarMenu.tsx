@@ -39,7 +39,7 @@ const ProfileSidebarMenu = () => {
         <LuCircleUser className="text-4xl"/>
         <div className="flex flex-col gap-0">
           <span className="leading-5 text-sm">Welcome back</span>
-          <span className="leading-5 font-bold uppercase">Mhd Rizki Purba</span>
+          <span className="leading-5 font-bold uppercase">Zainal</span>
         </div>
       </div>
       
