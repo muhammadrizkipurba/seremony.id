@@ -561,15 +561,15 @@ const ProductionTrackerData = [
         tasks: [
           {
             name: "Pengecekan akhir dekorasi",
-            status: "on progress",
+            status: "completed",
             notes: "",
-            image: ""
+            image: "https://drive.google.com/drive/folders/1FdDdbJeVsOB1eIxQ_tic5WKsNZlUjl0E"
           },
           {
             name: "Dekorasi siap untuk acara",
-            status: "on progress",
+            status: "completed",
             notes: "",
-            image: ""
+            image: "https://drive.google.com/drive/folders/1FdDdbJeVsOB1eIxQ_tic5WKsNZlUjl0E"
           }
         ]
       }
@@ -585,15 +585,15 @@ const ProductionTrackerData = [
         tasks: [
           {
             name: "Vendor photobooth tiba",
-            status: "on progress",
+            status: "completed",
             notes: "",
-            image: ""
+            image: "https://drive.google.com/drive/folders/1k83PO_Mx_8U8w42bdHhdLLZEI1yLjizr"
           },
           {
             name: "Setup photobooth selesai",
-            status: "on progress",
+            status: "completed",
             notes: "",
-            image: ""
+            image: "https://drive.google.com/drive/folders/1k83PO_Mx_8U8w42bdHhdLLZEI1yLjizr"
           }
         ]
       },
@@ -602,15 +602,15 @@ const ProductionTrackerData = [
         tasks: [
           {
             name: "Pengecekan photobooth",
-            status: "on progress",
+            status: "completed",
             notes: "",
-            image: ""
+            image: "https://drive.google.com/drive/folders/1FdDdbJeVsOB1eIxQ_tic5WKsNZlUjl0E"
           },
           {
             name: "Photobooth siap digunakan",
-            status: "on progress",
+            status: "completed",
             notes: "",
-            image: ""
+            image: "https://drive.google.com/drive/folders/1FdDdbJeVsOB1eIxQ_tic5WKsNZlUjl0E"
           },
         ]
       }
