@@ -29,10 +29,10 @@ type SpecialExperienceObject = {
 export type EventSitemapResponse = {
   _id: string;
   slug: string;
-}
+};
 
 export type PackageMetadataResponse = {
-   metadata: {
+  metadata: {
     openGraph: {
       type: string;
       title: string;
@@ -43,7 +43,7 @@ export type PackageMetadataResponse = {
     description: string;
   };
   _id: string;
-}
+};
 
 export type SinglePackageType = {
   metadata: {
@@ -118,7 +118,12 @@ export type VendorDecisionChangeLog = {
   category_value: string;
   updated_date: string;
   updated_by: string;
-  diff: {
+  previous_data: {
+    status: string;
+    notes: string;
+    value: string;
+  };
+  updated_data: {
     status: string;
     notes: string;
     value: string;
@@ -138,6 +143,77 @@ export type SingleMeetingDataProps = {
     name: string;
     description: string;
   }[];
-  changes_log: VendorDecisionChangeLog[];
-  change_order_summary: ChangeOrderSummary[]
+  meeting_date: string;
+  meeting_location: string;
+  change_logs: VendorDecisionChangeLog[];
+  change_order_summary: ChangeOrderSummary[];
+};
+
+type EventDataResponse = {
+    event_date: string;
+    total_pax: number;
+    event_location: string;
+    event_concept: string;
+    decoration_dominant_color: string;
+    maximum_budget: number;
+    contract_value: number;
+    package_type: "package" | "custom";
+    package_id: {
+      _id: string;
+      package_name: string;
+    };
+  };
+export type BookingDataResponse = {
+  event_data: EventDataResponse;
+  _id: string;
+  booking_code: string;
+  inquiry_date: string;
+  event_date_estimation: string;
+  decision_lock_vendors: {
+    vendor_category_code: string;
+    vendor_category_label: string;
+    vendor_name: string;
+    status: string;
+    notes: string;
+    last_update_meeting_phase: string;
+    approval_date: string;
+    _id: string;
+  }[];
+  meeting_tracker_id: {
+    _id: string;
+    meeting_data: {
+      code: string;
+      title: string;
+      meeting_date: string;
+      meeting_location: string;
+      agendas: {
+        name: string;
+        description: string;
+        _id: string;
+      }[];
+      change_order_summary: [];
+      _id: string;
+      change_logs: [];
+    }[];
+  };
+  production_tracker_id: {
+    _id: string;
+    trackers: {
+      vendor_category_code: string;
+      vendor_category_label: string;
+      vendor_name: string;
+      stages: {
+        phase: string;
+        tasks: {
+          name: string;
+          status: string;
+          notes: string;
+          image: string;
+          _id: string;
+        }[];
+        _id: string;
+      }[];
+      _id: string;
+    }[];
+  };
 };

@@ -24,12 +24,18 @@ export const ProfileSidebarMenus = [
   },
 ]
 
+interface User {
+  email: string;
+  name: string;
+  avatarUrl: string | null;
+};
+
 const ProfileSidebarMenu = () => {
   const router = useRouter();
   const pathname = usePathname();
 
   const authCookie = getCookie("auth");
-  let userData = null;
+  let userData: Partial<User> = {};
 
   if(authCookie) {
     const { user } = JSON.parse(authCookie);
@@ -47,7 +53,7 @@ const ProfileSidebarMenu = () => {
         <LuCircleUser className="text-4xl"/>
         <div className="flex flex-col gap-0">
           <span className="leading-5 text-sm">Welcome back</span>
-          <span className="leading-5 font-bold uppercase">{userData?.name}</span>
+          <p suppressHydrationWarning={true} className="leading-5 font-bold uppercase">{userData && userData.name}</p>
         </div>
       </div>
       

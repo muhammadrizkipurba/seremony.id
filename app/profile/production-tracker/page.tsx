@@ -4,8 +4,7 @@ import ProgressTracker from './ProgressTracker'
 import ProgressBarOverview from './ProgressBarOverview'
 import { IoReloadOutline } from 'react-icons/io5'
 import { cookies } from 'next/headers';
-import Link from 'next/link'
-import { HiArrowLongRight } from 'react-icons/hi2'
+import { MdLockClock } from "react-icons/md";
 
 const ProgressTrackerPage = async () => {
 
@@ -35,23 +34,19 @@ const ProgressTrackerPage = async () => {
                 <ProgressBarOverview />
               </div>
               <div className='bg-soft-gray p-4 rounded-xl mt-5'>
-                <h1 className='text-xl font-bold mb-4'>Progress Details</h1>
+                <h1 className='text-xl font-bold mb-4'>Production Details</h1>
                 <ProgressTracker />
               </div>
             </div>
             : <div className='md:col-span-2 lg:col-span-3'>
-              <div className='bg-soft-gray p-4 rounded-xl'>
+              <div className='bg-soft-gray p-4 rounded-xl min-h-[300px]'>
                 <div className='flex justify-between items-center'>
-                  <h1 className='text-xl font-bold'>Progress Tracker</h1>
+                  <h1 className='text-xl font-bold'>Production Tracker</h1>
                 </div>
                 <hr className="my-4" />
                 <div className='min-h-40 flex flex-col items-center justify-center'>
-                  <p className='text-center'>Progress Tracker akan tampil otomatis setelah melakukan pemesanan dan pembayaran DP</p>
-
-                  <Link href="/daftar-akun" className='button-primary-orange ps-5 pe-3 py-2 text-sm flex items-center gap-2 hover:font-bold mt-5' >
-                    Lihat Katalog
-                    <HiArrowLongRight />
-                  </Link>
+                  <MdLockClock size={64} />
+                  <p className='text-center mt-5'>Production Tracker akan tampil otomatis pada saat h-2 acara Anda</p>
                 </div>
               </div>
             </div>}

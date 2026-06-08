@@ -1,5 +1,5 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { ProductionTrackerData, ProgresTrackerData } from './ProgressTrackerData'
+import { ProductionTrackerData } from './ProgressTrackerData'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 
 type TasksTableProps = {
@@ -59,11 +59,11 @@ const ProgressTracker = () => {
           return (
             <AccordionItem value={`item-${idx}`} key={`faq-accordion-${idx + 1}`} className='rounded-xl overflow-hidden border'>
               <AccordionTrigger className='data-[state=open]:text-white data-[state=open]:bg-secondary-foreground hover:bg-accent-foreground/10 px-3 [&[data-state=open]>svg]:text-white'>
-                <h4 className='text-md uppercase font-semibold'>{item.vendor_category} - {item.vendor_name}</h4>
+                <h4 className='text-md uppercase font-semibold'>{item.vendor_category_label} - {item.vendor_name}</h4>
               </AccordionTrigger>
               {item.stages.map((stage, sidx) => {
                 return (
-                  <AccordionContent className='' key={`${item.vendor_category}-${sidx}`}>
+                  <AccordionContent className='' key={`${item.vendor_category_label}-${sidx}`}>
                     <h5 className='font-semibold p-3 bg-gray-300'>{stage.phase}</h5>
                     <div className='px-1'>
                       <TasksTable table_id={stage.phase} tasks={stage.tasks} />

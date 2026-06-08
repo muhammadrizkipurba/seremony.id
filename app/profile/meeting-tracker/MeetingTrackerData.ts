@@ -2,8 +2,8 @@ import { SingleMeetingDataProps } from "@/types";
 
 const DecisionLockStatusOptions = [
   { value: "pending", label: "pending"},
-  { value: "waiting_client_confirmation", label: "Waiting Client Confirmation"},
-  { value: "waiting_vendor_confirmation", label: "Waiting Vendor Confirmation"},
+  { value: "waitin_confirmation", label: "Waiting Confirmation"},
+  { value: "waiting_vendor", label: "Waiting Vendor"},
   { value: "locked", label: "Locked"}
 ];
 
@@ -20,7 +20,7 @@ const LeadInformation = {
 };
 
 const EventData = {
-  booking_id: "SR0004",
+  booking_code: "SR0004",
   event_date: "03-05-2026",
   event_location: "Hall Padang Sidempuan",
   estimate_total_pax: 3000,
@@ -259,7 +259,7 @@ const VendorPreferences = [
   }
 ];
 
-const MeetingsData: SingleMeetingDataProps[] = [
+const MeetingsData = [
   {
     code: "m0",
     title: "M0 - DISCOVERY, NEED ASSESSMENT & QUOTATION PREPARATION",
@@ -285,12 +285,17 @@ const MeetingsData: SingleMeetingDataProps[] = [
         description: "Menjelaskan paket dan sistem kerja Seremony"
       }
     ],
-    changes_log: [
+    change_logs: [
       {
         category_value: "",
         updated_date: "",
         updated_by: "",
-        diff: {
+        previous_data: {
+          status: "",
+          notes: "",
+          value: ""
+        },
+        updated_data: {
           status: "",
           notes: "",
           value: ""
@@ -331,7 +336,12 @@ const MeetingsData: SingleMeetingDataProps[] = [
         category_value: "",
         updated_date: "",
         updated_by: "",
-        diff: {
+        previous_data: {
+          status: "",
+          notes: "",
+          value: ""
+        },
+        updated_data: {
           status: "",
           notes: "",
           value: ""
@@ -376,7 +386,12 @@ const MeetingsData: SingleMeetingDataProps[] = [
         category_value: "",
         updated_date: "",
         updated_by: "",
-        diff: {
+        previous_data: {
+          status: "",
+          notes: "",
+          value: ""
+        },
+        updated_data: {
           status: "",
           notes: "",
           value: ""
@@ -421,7 +436,12 @@ const MeetingsData: SingleMeetingDataProps[] = [
         category_value: "",
         updated_date: "",
         updated_by: "",
-        diff: {
+        previous_data: {
+          status: "",
+          notes: "",
+          value: ""
+        },
+        updated_data: {
           status: "",
           notes: "",
           value: ""
@@ -438,4 +458,4 @@ const MeetingsData: SingleMeetingDataProps[] = [
   },
 ];
 
-export { DecisionLockStatusOptions, EventData, VendorPreferences, MeetingsData };
+export { DecisionLockStatusOptions, EventData, VendorPreferences, MeetingsData, LeadInformation };

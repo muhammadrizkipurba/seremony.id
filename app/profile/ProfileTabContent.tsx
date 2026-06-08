@@ -1,13 +1,15 @@
 "use client"
 
 import TextInput from "@/components/form/TextInput"
-import { getCookie } from "cookies-next/client";
+import { getCookie, deleteCookie } from "cookies-next/client";
 import { useCallback, useEffect, useState } from "react";
 import { getUserProfile, UserProfileData } from "./profileServices";
 import Alert, { AlertPropsType } from "@/components/ui/alert";
 import Loading from "@/components/Loading";
+import { useRouter } from "next/navigation";
 
 const ProfileTabContent = ({ }) => {
+  const router = useRouter();
   const authCookie = getCookie("auth");
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -32,7 +34,10 @@ const ProfileTabContent = ({ }) => {
 
     const { status, message, data } = successRequest;
 
-    if (status === 200) {
+    if(status === 403) {
+      deleteCookie("auth");
+      router.push("/login");
+    } else if (status === 200) {
       setUserData(data);
       setIsLoading(false);
     } else {
