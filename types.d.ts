@@ -115,24 +115,40 @@ export type SingleSeremonyEvent = {
 };
 
 export type VendorDecisionChangeLog = {
-  category_value: string;
+  _id: string;
+  booking_code: string;
+  meeting_phase: string;
+  previous_data: {
+    vendor_category_code: string | null;
+    vendor_category_label: string | null;
+    vendor_name: string | null;
+    status: "locked" | "pending" | "waiting_confirmation" | "waiting_vendor";
+    notes: string | null;
+  },
+  current_data: {
+    vendor_category_code: string;
+    vendor_category_label: string;
+    vendor_name: string | null;
+    status: "locked" | "pending" | "waiting_confirmation" | "waiting_vendor";
+    notes: string | null;
+  },
   updated_date: string;
   updated_by: string;
-  previous_data: {
-    status: string;
-    notes: string;
-    value: string;
-  };
-  updated_data: {
-    status: string;
-    notes: string;
-    value: string;
-  };
 };
 
 export type ChangeOrderSummary = {
+  _id: string;
+  booking_code: string;
+  meeting_phase: string;
+  vendor_category_code: string;
+  vendor_category_label: string;
+  vendor_name: string;
   item_name: string;
-  description: string;
+  status: "locked" | "pending" | "waiting_confirmation" | "waiting_vendor";
+  notes: string | null;
+  is_new_request: boolean;
+  inquiry_date: string;
+  approval_date: string | null;
   price_impact: number;
 };
 
@@ -145,8 +161,6 @@ export type SingleMeetingDataProps = {
   }[];
   meeting_date: string;
   meeting_location: string;
-  change_logs: VendorDecisionChangeLog[];
-  change_order_summary: ChangeOrderSummary[];
 };
 
 type EventDataResponse = {
@@ -162,23 +176,26 @@ type EventDataResponse = {
       _id: string;
       package_name: string;
     };
-  };
+};
+
+export type DecitionLockDataType = {
+  vendor_category_code: string;
+  vendor_category_label: string;
+  vendor_name: string;
+  status: string;
+  notes: string;
+  last_update_meeting_phase: string;
+  approval_date: string;
+  _id: string;
+};
+
 export type BookingDataResponse = {
   event_data: EventDataResponse;
   _id: string;
   booking_code: string;
   inquiry_date: string;
   event_date_estimation: string;
-  decision_lock_vendors: {
-    vendor_category_code: string;
-    vendor_category_label: string;
-    vendor_name: string;
-    status: string;
-    notes: string;
-    last_update_meeting_phase: string;
-    approval_date: string;
-    _id: string;
-  }[];
+  decision_lock_vendors: DecitionLockDataType[];
   meeting_tracker_id: {
     _id: string;
     meeting_data: {
@@ -191,10 +208,10 @@ export type BookingDataResponse = {
         description: string;
         _id: string;
       }[];
-      change_order_summary: [];
       _id: string;
-      change_logs: [];
     }[];
+    change_logs: VendorDecisionChangeLog[];
+    change_order_summary: ChangeOrderSummary[];
   };
   production_tracker_id: {
     _id: string;
