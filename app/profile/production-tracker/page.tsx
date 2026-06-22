@@ -20,7 +20,7 @@ const ProgressTrackerPage = async () => {
           <div className='md:col-span-2 lg:col-span-1'>
             <ProfileSidebarMenu />
           </div>
-          {user && user.email === "zainalnst1995@gmail.com" ?
+          {user && (user.email === "rizki.seremony@gmail.com" || user.email === "nabila_chairin@yahoo.com") ?
             <div className='md:col-span-2 lg:col-span-3'>
               <div className='bg-soft-gray p-4 rounded-xl'>
                 <div className='flex justify-between items-center'>

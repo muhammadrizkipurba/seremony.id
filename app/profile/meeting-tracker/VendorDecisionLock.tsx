@@ -29,6 +29,7 @@ const VendorDecisionLock = ({
           </thead>
           <tbody>
             {decisionLockData.map((item, idx) => {
+              const notesArr = item.notes.split(",").join("<br/>");
               return (
                 <tr key={`dlv-${idx}`} className="odd:bg-neutral-primary even:bg-gray-50 border-b border-default last:border-b-0">
                   <th scope="row" className="px-6 py-4 font-semibold text-heading whitespace-nowrap">
@@ -46,7 +47,7 @@ const VendorDecisionLock = ({
                     </div>
                   </td>
                   <td className="px-6 py-4">
-                    {item.notes || "-"}
+                    <p className='text-xs' dangerouslySetInnerHTML={{__html: notesArr || "-"}}></p>
                   </td>
                 </tr>
               )
