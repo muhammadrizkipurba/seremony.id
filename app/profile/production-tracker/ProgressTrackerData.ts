@@ -1226,7 +1226,7 @@ const ProductionTrackerData = [
           },
           {
             name: "Setup area utama venue selesai (seating, stage, area tamu)",
-            status: "pending",
+            status: "completed",
             notes: "",
             image:
               "https://drive.google.com/drive/folders/1SiklutzNKIn6Mqk_R5GUBYuaAuM0m191?usp=drive_link"
@@ -1238,14 +1238,14 @@ const ProductionTrackerData = [
         tasks: [
           {
             name: "Pengecekan akhir kondisi venue sebelum acara",
-            status: "pending",
+            status: "completed",
             notes: "",
             image:
               "https://drive.google.com/drive/folders/1SiklutzNKIn6Mqk_R5GUBYuaAuM0m191?usp=drive_link"
           },
           {
             name: "Venue siap digunakan untuk acara",
-            status: "pending",
+            status: "completed",
             notes: "",
             image:
               "https://drive.google.com/drive/folders/1SiklutzNKIn6Mqk_R5GUBYuaAuM0m191?usp=drive_link"
@@ -1271,7 +1271,7 @@ const ProductionTrackerData = [
           },
           {
             name: "Instalasi dekorasi utama selesai (stage, backdrop, aisle)",
-            status: "pending",
+            status: "completed",
             notes: "",
             image:
               "https://drive.google.com/drive/folders/1xmo0D1FjX81Znzdx_TaEUHIOmUE8vx31?usp=drive_link"
@@ -1283,14 +1283,14 @@ const ProductionTrackerData = [
         tasks: [
           {
             name: "Pengecekan akhir dekorasi",
-            status: "pending",
+            status: "completed",
             notes: "",
             image:
               "https://drive.google.com/drive/folders/1-Mi1OGkWPWRKqhYAFvyqe9VXJ-dyg5Ii?usp=drive_link"
           },
           {
             name: "Dekorasi siap untuk acara",
-            status: "pending",
+            status: "completed",
             notes: "",
             image:
               "https://drive.google.com/drive/folders/1zqoIXmGDZLKydK-2K7rkt5aiBNa7Pvq8?usp=drive_link"
@@ -1302,7 +1302,7 @@ const ProductionTrackerData = [
   {
     vendor_category_code: "wedding-organizer",
     vendor_category_label: "Wedding Organizer",
-    vendor_name: "Rara Florist",
+    vendor_name: "Sakha Wedding",
     stages: [
       {
         phase: "H-1 — PRODUCTION, LOADING & INSTALLATION",
@@ -1326,14 +1326,14 @@ const ProductionTrackerData = [
         tasks: [
           {
             name: "Briefing akhir sebelum acara",
-            status: "pending",
+            status: "completed",
             notes: "",
             image:
               "https://drive.google.com/drive/folders/1Q_uPKUtLWmw68crhDrg_lkIkt8DZCf8p?usp=drive_link"
           },
           {
             name: "Tim WO siap menjalankan acara",
-            status: "pending",
+            status: "completed",
             notes: "",
             image:
               "https://drive.google.com/drive/folders/1DwBJDmVWuYYW9C-wA1jxG5HNSd9pLoOm?usp=drive_link"
@@ -1359,7 +1359,7 @@ const ProductionTrackerData = [
           },
           {
             name: "Setup area buffet selesai",
-            status: "pending",
+            status: "completed",
             notes: "",
             image:
               "https://drive.google.com/drive/folders/1NAjFphSC9JsGwrQ-FbX_VBRi9LfItZfL?usp=drive_link"
@@ -1371,14 +1371,14 @@ const ProductionTrackerData = [
         tasks: [
           {
             name: "Persiapan service catering sebelum acara",
-            status: "pending",
+            status: "completed",
             notes: "",
             image:
               "https://drive.google.com/drive/folders/1RIib8j3hneNmrRVqfatYXDqdV_p_JIrW?usp=drive_link"
           },
           {
             name: "Catering siap melayani tamu",
-            status: "pending",
+            status: "completed",
             notes: "",
             image:
               "https://drive.google.com/drive/folders/1PcNFF0ky2N6wefjkeO6ljHzIoVZWRHf9?usp=drive_link"
@@ -1397,14 +1397,14 @@ const ProductionTrackerData = [
         tasks: [
           {
             name: "Vendor stall tiba di venue\t",
-            status: "pending",
+            status: "completed",
             notes: "",
             image:
               "https://drive.google.com/drive/folders/1vgEtgxR6_SuP_Xk7P9uCYatb-qr1g5-6?usp=drive_link"
           },
           {
             name: "Setup stall table selesai",
-            status: "pending",
+            status: "completed",
             notes: "",
             image:
               "https://drive.google.com/drive/folders/1nXvhnKCP0TYoCOhZzr0Q5fHWVPaAtix3?usp=drive_link"
@@ -1416,14 +1416,14 @@ const ProductionTrackerData = [
         tasks: [
           {
             name: "Pengecekan akhir stall display",
-            status: "pending",
+            status: "completed",
             notes: "",
             image:
               "https://drive.google.com/drive/folders/1W2pMoeJ6LihssVq_HJIajF3haJR0FmFT?usp=drive_link"
           },
           {
             name: "Dessert table siap untuk tamu",
-            status: "pending",
+            status: "completed",
             notes: "",
             image:
               "https://drive.google.com/drive/folders/1h02KZQr1mw5WA0vs4Mt5nUVMGwM5xlcy?usp=drive_link"
@@ -1485,13 +1485,13 @@ const ProductionTrackerData = [
         tasks: [
           {
             name: "Hair stylist mulai styling bride",
-            status: "pending",
+            status: "completed",
             notes: "",
             image: ""
           },
           {
             name: "Proses hair styling bride berlangsung",
-            status: "pending",
+            status: "completed",
             notes: "",
             image: ""
           },
@@ -1526,13 +1526,13 @@ const ProductionTrackerData = [
         tasks: [
           {
             name: "Hair stylist mulai grooming groom",
-            status: "pending",
+            status: "completed",
             notes: "",
             image: ""
           },
           {
             name: "Proses grooming groom berlangsung",
-            status: "pending",
+            status: "completed",
             notes: "",
             image: ""
           },
@@ -1574,7 +1574,7 @@ const ProductionTrackerData = [
           },
           {
             name: "Setup area performance selesai",
-            status: "pending",
+            status: "completed",
             notes: "",
             image:
               "https://drive.google.com/drive/folders/1rwBxJ91bjXY8Lk6tpk23vK0neHudID71?usp=drive_link",
@@ -1657,14 +1657,14 @@ const ProductionTrackerData = [
         tasks: [
           {
             name: "Sweet bar tiba di venue",
-            status: "pending",
+            status: "completed",
             notes: "",
             image:
               "https://drive.google.com/drive/folders/193rQryNZDqQ055-ZLsE7aWEPoNkKqiL4?usp=drive_link"
           },
           {
             name: "Setup sweet bar selesai",
-            status: "pending",
+            status: "completed",
             notes: "",
             image: ""
           },
